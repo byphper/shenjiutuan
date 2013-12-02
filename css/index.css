@@ -20,6 +20,7 @@ html body{
 #navigate a{
 	font-size: 20px;
 	FONT-FAMILY:"黑体","Courier New","tahoma";
+	border-bottom: 1px solid #DDDDDD;
 }
 
 #left{
