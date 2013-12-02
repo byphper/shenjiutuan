@@ -1,5 +1,5 @@
 html body{
-	width:1200px;
+	width:80%;
 	height:100%;
 	margin: auto;
 	background-image: url("../img/back.png");
@@ -10,36 +10,36 @@ html body{
 	height: 220px;
      
 }
-
-#content{
-	width:1200px;
-	margin: auto;
-	
+#navigate {
+	width: 100%;
+	border-bottom: 2px solid #A4730D;
 }
 
+
 #navigate a{
-	font-size: 20px;
-	FONT-FAMILY:"黑体","Courier New","tahoma";
-	border-bottom: 1px solid #DDDDDD;
+	font-size: 16px;
+	font-weight: bold;
+	
 }
 
 #left{
-	width: 850px;
+	width: 70%;
 	height: 500px;
 	float: left;
-	margin-left: 50px;
+	margin-left: 20px;
+	
 	
 }
 #right{
-	width: 290px;
+	width: 25%;
 	height: 500px;
 	border-left: 1px solid #DDDDDD;
 	float: left;
-	padding-left: 10px;
+	
 }
 .login-input{
 	margin-top: 10px;
-	color:red;
+	color:#A4730D;
 
 }
 .login-input input{
@@ -61,16 +61,27 @@ html body{
 
 .lb{
 	color:#A4730D;
+	font-weight: normal;
 }
 #userinfo{
 	padding-bottom: 20px;
 	border-bottom: 1px solid #DDDDDD;
 }
 #match_header{
-	width:290px;
 	text-align:center;
-	font-size:18px;
+	font-size:16px;
 	font-weight: bold;
 	color:red;
 	margin-top: 20px;
+}
+#userinfo{
+	padding-left: 10px;
+}
+#buttom{
+	width: 100%;
+	height: 200px;
+	background-color: red;
+}
+#con{
+	margin-top: 10px;
 }
