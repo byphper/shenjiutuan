@@ -31,6 +31,8 @@ return  array(
     'APP_SUB_DOMAIN_DENY'   => array(), //  子域名禁用列表
     'APP_GROUP_LIST'        => '',      // 项目分组设定,多个组之间用逗号分隔,例如'Home,Admin'
     'ACTION_SUFFIX'         =>  '', // 操作方法后缀
+	'APP_GROUP_LIST'=>'Admin,Home',
+	'DEFAULT_GROUP'=>'Home',
 
     /* Cookie设置 */
     'COOKIE_EXPIRE'         => 0,    // Coodie有效期

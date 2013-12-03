@@ -1,12 +1,17 @@
 <!-- 主要功能，会员可以登录， 订票，跟车，聚会，约球      可以发布球迷会新闻，
 users
-id  nickname eamil password  tel  isVip  isYear  address joindate
+id  nickname eamil password  tel  isVip  isYear isAdmin address joindate
+
 news
 id  title  content date
+
 tickets
 id  title remark maxnums status date
+
 tickets_log
 id ticketsid userid  nickname  nums  style  goadd remark  date
+
+
 
 
 
