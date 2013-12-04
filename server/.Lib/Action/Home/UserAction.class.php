@@ -2,7 +2,6 @@
 
 class UserAction extends BaseAction {
 
-
     public function checkUser() {
         if ($this->isPost()) {
             $user=$this->filter($_POST['email']);
@@ -33,6 +32,18 @@ class UserAction extends BaseAction {
 
         }
     }
+	
+	public function loginout(){
+		session_start();
+		if(isset($_SESSION['user'])&&!empty($_SESSION['user'])){
+			$_SESSION=array();
+			if(isset($_COOKIE[session_name()])){
+				setcookie(session_name(),'',time()-3600,'/');
+			}
+			session_destroy();
+		}
+		header("location:../../../sjt/login.php");
+	}
 
 
 }

@@ -1,3 +1,42 @@
 #all{
-	margin-left: 30px;
+	width: 100%;
+	height: 100%;
+}
+
+
+#h-left{
+	width: 100%;
+	height: 100px;
+	background-image:-webkit-linear-gradient(to top, #EEEEEE, #86ABE4);
+  background-image:linear-gradient(to top,#EEEEEE, #86ABE4);
+	 line-height: 100px;
+  padding-left: 50px;
+  text-align: left;
+  font-weight: 900;
+  font-size: 30px;
+  color: #fff;
+}
+#user{
+	padding-left: 50px;
+	font-size: 14px;
+	color: #585858;
+	border-bottom: 1px solid #E1E1E2;
+}
+#left{
+	float: left;
+	width: 100px;
+	height: 500px;
+	padding-left: 10px;
+	
+}
+#right{
+	margin-left: 50px;
+	float: left;
+	width: 800px;
+	height: 500px;
+	
+
+}
+#con{
+	margin-top: 20px;
 }

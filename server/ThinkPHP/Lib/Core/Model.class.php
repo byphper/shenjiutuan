@@ -314,6 +314,7 @@ class Model {
         if(false === $this->_before_insert($data,$options)) {
             return false;
         }
+		
         // 写入数据到数据库
         $result = $this->db->insert($data,$options,$replace);
         if(false !== $result ) {
@@ -1291,6 +1292,7 @@ class Model {
      * @return Model
      */
     public function data($data=''){
+	
         if('' === $data && !empty($this->data)) {
             return $this->data;
         }

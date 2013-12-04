@@ -3,9 +3,9 @@ var app = angular.module('SjtBack',[],function(){});
  app.config(['$routeProvider', function($routeProvider){
         $routeProvider.
             when('/', {
-                templateUrl: 'tpl/newvip.html'
-            }).when('/newvip', {
-                template: '新人必读'
+                template: 'wiri'
+            }).when('/modifyPwd', {
+                templateUrl: 'tpl/modifypwd.html'
             }).when('/bookticket', {
                 template: '预定球票'
             }).when('/party', {

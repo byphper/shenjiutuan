@@ -15,4 +15,11 @@ class BaseAction extends Action {
 		session_start();
 		$_SESSION[$name]=$val;
 	}
+	
+	protected function echoJsonMsg($msg=array()){
+			if(is_array($msg)){
+				return json_encode($msg);
+			}
+			return false;
+	}
 }
