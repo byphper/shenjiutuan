@@ -1,7 +1,8 @@
 ﻿<?php
 session_start();
 if(isset($_SESSION['user'])&&!empty($_SESSION['user'])){
-	echo "<script>window.loaction.href='sjt/main.php'</script>";
+	echo "<script>window.location.href='main.php'</script>";
+  exit;
 }
 
 ?>
@@ -27,7 +28,7 @@ body {
 </style></head>
 <script src="../js/jquery-1.9.1.js"></script>
 <body>
-<form id="login" action="../server/index.php/user/checkUser" method="POST">
+<form id="login" action="../index.php/Admin/user/checkUser" method="POST">
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td bgcolor="#e5f6cf">&nbsp;</td>

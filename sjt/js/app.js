@@ -5,7 +5,8 @@ var app = angular.module('SjtBack',[],function(){});
             when('/', {
                 template: 'wiri'
             }).when('/modifyPwd', {
-                templateUrl: 'tpl/modifypwd.html'
+                templateUrl: 'tpl/modifypwd.html',
+                controller:'modifypwdCtrl'
             }).when('/bookticket', {
                 template: '预定球票'
             }).when('/party', {
@@ -22,3 +23,11 @@ var app = angular.module('SjtBack',[],function(){});
                 template: '关于深九团'
             });
 }]);
+
+ /**控制器*/
+ app.controller('modifypwdCtrl', ['$scope',  function($scope){
+        $scope.modify=function(){
+           alert(123);
+        }  
+
+    }]);

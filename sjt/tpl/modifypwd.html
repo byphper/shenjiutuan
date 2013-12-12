@@ -1,5 +1,12 @@
 <div>
-<input type="password" class="form-control"  placeholder="旧密码"><br>
-<input type="password" class="form-control"  placeholder="新密码"><br>
-<input type="password" class="form-control"  placeholder="新密码"><br>
+	<form name="ModifyPwdForm" ng-submit="modify()">
+		<input type="password" name="old" class="form-control" required  placeholder="旧密码" ng-model='pwd.old'>
+		<br>
+		<input type="password" name="new1" class="form-control" required  placeholder="新密码" ng-model='pwd.new1'>
+		<br>
+		<input type="password" name="new2" class="form-control" required  placeholder="新密码" ng-model='pwd.new2'>
+		<br>
+		<input type="submit" value="确认修改" class="btn btn-info"/>
+	</form>
 </div>
+

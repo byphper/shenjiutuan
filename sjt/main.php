@@ -28,7 +28,7 @@ if(empty($_SESSION['user'])){
 				<span style="color:#428BCA">
 					<?php echo $_SESSION['user']['nickname']?></span>
 				&emsp;
-				<a href="../server/index.php/user/loginout">退出</a>
+				<a href="../index.php/Admin/user/loginout">退出</a>
 				&emsp;
 				<a href="#modifyPwd">修改密码</a>
 			</div>
