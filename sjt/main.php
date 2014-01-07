@@ -44,6 +44,7 @@ if(empty($_SESSION['user'])){
 					<a href="#" class="list-group-item">会员管理</a>
 					<a href="#" class="list-group-item">组织看球</a>
 					<a href="#" class="list-group-item">组织聚会</a>
+					<a href="#" class="list-group-item">跟車地點</a>
 					<a href="#" class="list-group-item">图片管理</a>
 					<a href="#" class="list-group-item">视频管理</a>
 				</div>

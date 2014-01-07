@@ -17,7 +17,7 @@ class BaseAction extends Action {
 	}
 	
 	protected function echoJsonMsg($msg=array()){
-			if(is_array($msg)){
+			if(is_array($msg)&&!empty($msg)){
 				return json_encode($msg);
 			}
 			return false;

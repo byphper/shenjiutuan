@@ -9,25 +9,21 @@ var app = angular.module('SjtBack',[],function(){});
                 controller:'modifypwdCtrl'
             }).when('/bookticket', {
                 template: '预定球票'
-            }).when('/party', {
-                template: '参加聚会'
-            }).when('/playfootball', {
-                template: '组织踢球'
-            }).when('/joinus', {
-                template: '加入我们'
-            }).when('/picture', {
-                template: '助威图片'
-            }).when('/video', {
-                template: '助威视频'
-            }).when('/about', {
-                template: '关于深九团'
             });
 }]);
 
  /**控制器*/
  app.controller('modifypwdCtrl', ['$scope',  function($scope){
         $scope.modify=function(){
-           alert(123);
+            if($scope.pwd.new1!=$scope.pwd.new2){
+                alert("两次密码不一致!");
+            }else{
+
+            }
         }  
 
-    }]);
+}]);
+
+ 
+
+

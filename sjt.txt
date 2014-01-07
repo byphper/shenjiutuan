@@ -1,0 +1,10 @@
+弄了个域名和空间，有空搞搞看，谢谢先。
+www.g12d9.com
+FTP:
+IP：173.255.140.188
+User:g12d9@w78cms.com
+Pass:Qq50290749
+
+Mysql：localhost
+用户名/数据名：wcmscom_g12d9
+密码：Qq50290749

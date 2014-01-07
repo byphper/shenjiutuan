@@ -18,6 +18,7 @@ class UserAction extends BaseAction {
                 if ($userModel->checkUserExists($user,$isAdmin)) {
                     if ($userinfo=$userModel->finalCheck($user,$pwd,$isAdmin)) {
                         $this->setSession('user',$userinfo);
+						
                         header("location:../../../sjt/main.php");
                     } else {
                         $this->alert("用户名或者密码错误!","../../../sjt/login.php");
