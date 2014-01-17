@@ -1,10 +1,10 @@
-<form method="POST" action="../server/index.php/Admin/news/add">
-		标题:<input type="text" name="title" />
-		<textarea id="con" name="con" rows="10" cols="80">This is my textarea to be replaced with CKEditor.</textarea>
-		<input type="submit" value="添加">
-		<script>
-                CKEDITOR.replace( 'con',{
-                	uiColor: '#9AB8F3',
-                } );
-        </script>
+
+<form method="POST">
+		标题：<input type="text" ng-model="news.title" class="form-control" name="title" style="width:350px;height:30px;"/><br/>
+		是否公开:<input type="checkbox" ng-model="news.isPublic" name="isPublic" value="true" />
+		<div id="warp_editor">
+			<script id="editor" type="text/plain" style="width:1024px;height:400px;"></script>
+		</div><br />
+
+		<input type="submit" ng-click="submit()" value="确认添加" class="btn btn-info" />
 </form>

@@ -1,0 +1,261 @@
+[ 2014-01-13T20:41:16+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2014-01-13T20:41:27+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.062500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2014-01-13T20:42:04+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:42:26+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.046875s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+
+[ 2014-01-13T20:42:53+08:00 ] ERR: (ThinkException) 非法操作:changepwds
+[ 2014-01-13T20:43:20+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 70 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 85 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.046875s ]
+
+[ 2014-01-13T20:43:40+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 70 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 81 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 85 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.015625s ]
+
+[ 2014-01-13T20:43:59+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 71 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 82 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 86 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:44:25+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:44:43+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:45:12+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:47:33+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:47:45+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:47:49+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:47:54+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T20:48:31+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: old D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 72 行.
+NOTIC: [8] Undefined index: p1 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 73 行.
+NOTIC: [8] Undefined index: p2 D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 74 行.
+NOTIC: [8] Undefined index: pwd D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 83 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 87 行.
+SQL: UPDATE `userinfo` SET `pwd`='d41d8cd98f00b204e9800998ecf8427e' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T21:33:25+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.031250s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: email D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Action\Admin\UserAction.class.php 第 100 行.
+SQL: UPDATE `userinfo` SET `pwd`='c33367701511b4f6020ec61ded352059' WHERE email='' [ RunTime:0.000000s ]
+
+[ 2014-01-13T21:33:50+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='c33367701511b4f6020ec61ded352059' WHERE email='123@163.com' [ RunTime:0.062500s ]
+
+[ 2014-01-13T21:34:02+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+SQL: UPDATE `userinfo` SET `pwd`='c33367701511b4f6020ec61ded352059' WHERE email='123@163.com' [ RunTime:0.046875s ]
+
+[ 2014-01-13T21:37:36+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.125000s ]
+NOTIC: [8] Undefined variable: result D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 30 行.
+
+[ 2014-01-13T21:37:42+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.281250s ]
+NOTIC: [8] Undefined variable: result D:\develep_soft\xammp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 30 行.
+
+[ 2014-01-13T21:42:17+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.046875s ]
+
+[ 2014-01-13T21:46:50+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.031250s ]
+
+[ 2014-01-13T21:47:06+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.093750s ]
+
+[ 2014-01-13T21:47:15+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.031250s ]
+
+[ 2014-01-13T21:47:17+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.062500s ]
+
+[ 2014-01-13T21:47:45+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.031250s ]
+
+[ 2014-01-13T21:50:21+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='c33367701511b4f6020ec61ded352059' WHERE email='123@163.com' [ RunTime:0.031250s ]
+
+[ 2014-01-13T21:51:02+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.031250s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.062500s ]
+
+[ 2014-01-13T21:52:40+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='c33367701511b4f6020ec61ded352059' WHERE email='123@163.com' [ RunTime:0.046875s ]
+
+[ 2014-01-13T21:53:06+08:00 ] 127.0.0.1 /shenjiutuan/index.php/Admin/user/changePwd
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.000000s ]
+SQL: UPDATE `userinfo` SET `pwd`='e10adc3949ba59abbe56e057f20f883e' WHERE email='123@163.com' [ RunTime:0.031250s ]
+

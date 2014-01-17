@@ -15,6 +15,11 @@ if(empty($_SESSION['user'])){
 	<script src="../js/angular.js"></script>
 	<script src="../js/jquery-1.9.1.js"></script>
 	<script src="../js/bootstrap.js"></script>
+	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
+	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.all.js"> </script>
+	    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
+	    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
+	<script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
 	<script src="ckeditor/ckeditor.js"></script>
 	<script src="js/app.js"></script>
 </head>
@@ -31,22 +36,24 @@ if(empty($_SESSION['user'])){
 				<a href="../index.php/Admin/user/loginout">退出</a>
 				&emsp;
 				<a href="#modifyPwd">修改密码</a>
+				&emsp;&emsp;&emsp;	&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+				<span style="color:red">上次登陆时间：<?=$_SESSION['user']['last_date']?></span>
 			</div>
 			<div>
 				
 			</div>
 		</div>
-
+		
 		<div id="con">
 			<div id="left">
 				<div class="list-group">
-					<a href="#" class="list-group-item active">新闻公告</a>
+					<a href="#addNews" class="list-group-item active">新闻公告</a>
 					<a href="#" class="list-group-item">会员管理</a>
 					<a href="#" class="list-group-item">组织看球</a>
 					<a href="#" class="list-group-item">组织聚会</a>
 					<a href="#" class="list-group-item">跟車地點</a>
 					<a href="#" class="list-group-item">图片管理</a>
-					<a href="#" class="list-group-item">视频管理</a>
+					<a href="#" class="list-group-item" onclick="UE.getEditor('editor')">视频管理</a>
 				</div>
 
 			</div>
@@ -58,7 +65,9 @@ if(empty($_SESSION['user'])){
 	</div>
 	
 </body>
+
 <script type="text/javascript">
+
 	$(function(){
 		var active=$("#left .active");
 		$(".list-group-item").click(function(){
@@ -66,8 +75,6 @@ if(empty($_SESSION['user'])){
 			active=$(this).addClass("list-group-item active");
 		})
 	})
-	function modifyUI(){
-
-	}
+	
 </script>
 </html>

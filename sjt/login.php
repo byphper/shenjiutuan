@@ -9,7 +9,7 @@ if(isset($_SESSION['user'])&&!empty($_SESSION['user'])){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>管理平台</title>
+<title>深九团后台管理平台</title>
 <style type="text/css">
 <!--
 body {
@@ -28,7 +28,7 @@ body {
 </style></head>
 <script src="../js/jquery-1.9.1.js"></script>
 <body>
-<form id="login" action="../index.php/Admin/user/checkUser" method="POST">
+<form id="login" action="../index.php/Admin/user/checkAdminUser" method="POST">
 <table width="100%" height="100%" border="0" cellpadding="0" cellspacing="0">
   <tr>
     <td bgcolor="#e5f6cf">&nbsp;</td>

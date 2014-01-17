@@ -1,34 +1,25 @@
--- phpMyAdmin SQL Dump
--- version 4.0.4.1
--- http://www.phpmyadmin.net
---
--- 主机: 127.0.0.1
--- 生成日期: 2013 年 12 月 03 日 11:11
--- 服务器版本: 5.5.32
--- PHP 版本: 5.4.19
+/*
+Navicat MySQL Data Transfer
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
+Source Server         : localshot
+Source Server Version : 50532
+Source Host           : localhost:3306
+Source Database       : sjt
 
+Target Server Type    : MYSQL
+Target Server Version : 50532
+File Encoding         : 65001
 
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+Date: 2014-01-17 18:49:35
+*/
 
---
--- 数据库: `sjt`
---
-CREATE DATABASE IF NOT EXISTS `sjt` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-USE `sjt`;
+SET FOREIGN_KEY_CHECKS=0;
 
--- --------------------------------------------------------
-
---
--- 表的结构 `booktickets`
---
-
-CREATE TABLE IF NOT EXISTS `booktickets` (
+-- ----------------------------
+-- Table structure for `booktickets`
+-- ----------------------------
+DROP TABLE IF EXISTS `booktickets`;
+CREATE TABLE `booktickets` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(30) NOT NULL,
   `remark` varchar(100) NOT NULL,
@@ -36,29 +27,37 @@ CREATE TABLE IF NOT EXISTS `booktickets` (
   `status` smallint(6) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of booktickets
+-- ----------------------------
 
---
--- 表的结构 `news`
---
-
-CREATE TABLE IF NOT EXISTS `news` (
+-- ----------------------------
+-- Table structure for `news`
+-- ----------------------------
+DROP TABLE IF EXISTS `news`;
+CREATE TABLE `news` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `title` varchar(50) NOT NULL,
   `content` text NOT NULL,
+  `user` varchar(20) NOT NULL,
   `date` datetime NOT NULL,
+  `status` smallint(2) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of news
+-- ----------------------------
+INSERT INTO `news` VALUES ('11', '金馬影帝得住', '<p><img src=\"http://localhost/shenjiutuan/sjt/ueditor/php/upload1//20140117/1389951394659591.jpg\"/></p>', '深圳-影帝', '2014-01-17 17:45:44', '0');
+INSERT INTO `news` VALUES ('12', '我不足歐大哥豪賭您', '<p><img src=\"http://localhost/shenjiutuan/sjt/ueditor/php/upload1//20140117/1389951394659591.jpg\"/></p>', '深圳-影帝', '2014-01-17 18:34:08', '0');
 
---
--- 表的结构 `ticket_logs`
---
-
-CREATE TABLE IF NOT EXISTS `ticket_logs` (
+-- ----------------------------
+-- Table structure for `ticket_logs`
+-- ----------------------------
+DROP TABLE IF EXISTS `ticket_logs`;
+CREATE TABLE `ticket_logs` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `tid` int(11) NOT NULL,
   `uid` int(11) NOT NULL,
@@ -70,15 +69,17 @@ CREATE TABLE IF NOT EXISTS `ticket_logs` (
   `remark` int(50) NOT NULL,
   `date` datetime NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
--- --------------------------------------------------------
+-- ----------------------------
+-- Records of ticket_logs
+-- ----------------------------
 
---
--- 表的结构 `userinfo`
---
-
-CREATE TABLE IF NOT EXISTS `userinfo` (
+-- ----------------------------
+-- Table structure for `userinfo`
+-- ----------------------------
+DROP TABLE IF EXISTS `userinfo`;
+CREATE TABLE `userinfo` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nickname` varchar(10) NOT NULL,
   `email` varchar(20) NOT NULL,
@@ -89,17 +90,13 @@ CREATE TABLE IF NOT EXISTS `userinfo` (
   `isAdmin` smallint(6) NOT NULL,
   `address` int(32) NOT NULL,
   `joindate` datetime NOT NULL,
+  `last_date` datetime NOT NULL,
+  `last_ip` varchar(16) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `nickname` (`nickname`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
---
--- 转存表中的数据 `userinfo`
---
-
-INSERT INTO `userinfo` (`id`, `nickname`, `email`, `pwd`, `tel`, `isVip`, `isYear`, `isAdmin`, `address`, `joindate`) VALUES
-(1, '深圳-影帝', '123@163.com', '827ccb0eea8a706c4c34a16891f84e7b', '18318873015', 1, 1, 1, 0, '2013-12-03 04:14:18');
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+-- ----------------------------
+-- Records of userinfo
+-- ----------------------------
+INSERT INTO `userinfo` VALUES ('1', '深圳-影帝', '123@163.com', 'd792f730bfb29f19918c1f6935ff1790', '18318873015', '1', '1', '1', '0', '2013-12-03 04:14:18', '2014-01-17 17:44:05', '127.0.0.1');

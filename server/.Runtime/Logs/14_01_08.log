@@ -1,0 +1,6 @@
+[ 2014-01-08T17:48:05+08:00 ] ERR: (ThinkException) 非法操作:.rootpath
+[ 2014-01-08T17:49:53+08:00 ] ERR: (ThinkException) 非法操作:rootpath
+[ 2014-01-08T18:00:46+08:00 ] ERR: (ThinkException) 无法加载模块:Sjt
+[ 2014-01-08T18:01:35+08:00 ] ERR: (ThinkException) 非法操作:sjt
+[ 2014-01-08T18:01:39+08:00 ] ERR: (ThinkException) 无法加载模块:Sjt
+[ 2014-01-08T18:02:08+08:00 ] ERR: (ThinkException) 非法操作:sjt

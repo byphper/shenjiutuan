@@ -9,7 +9,7 @@ tickets
 id  title remark maxnums status date
 
 tickets_log
-id ticketsid userid  nickname  nums  style  goadd remark  date
+id ticketsid userid  nickname  nums  style  goadd remark status date
 
 
 
