@@ -27871,10 +27871,10 @@
          */
         UE.getEditor = function(id, opt) {
             var editor = instances[id];
-            if(!editor){
+            
                  editor = instances[id] = new UE.ui.Editor(opt);
                  editor.render(id);
-            }
+            
             return editor;
         };
 

@@ -111,5 +111,20 @@ class UserAction extends BaseAction {
 		}
 	}
 	
+	public function ajaxGetUsers(){
+		 header('Content-Type: text/html; charset=utf-8');
+        import("ORG.Util.Page");
+        $get=$_GET;
+        $page=$get['page']?$get['page']:1;
+        $userModel=D("User");
+        $count=$userModel->count();
+        $data=$userModel->getPage($page,15,array("status"=>1),true);
+        $pager=new Page($count,15,"setPage","changePage");
+
+        $data=array("data"=>$data,"page"=>$pager->fpage());
+        echo $this->echoJsonMsg($data);
+
+	}
+
 
 }

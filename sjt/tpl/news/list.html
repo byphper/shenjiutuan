@@ -1,0 +1,28 @@
+<input type="button" class="btn btn-info" value="添加新闻" ng-click="addNews()"/>
+
+
+<br /><br />
+<table class="table" style="width:1000px;">
+  <tr style="color:#428BCA;font-weight:bold;font-size:16px">
+  	<td>id</td>
+  	<td>标题</td>
+  	<td>是否公开</td>
+  	<td>时间</td>
+  	<td>操作</td>
+  </tr>
+  <tbody ng-repeat="news in list">
+  	<tr style="color:gray">
+  		<td>{{news.id}}</td>
+	  	<td>{{news.title}}</td>
+	  	<td>{{news.status==1?'是':'否'}}</td>
+	  	<td>{{news.date}}</td>
+	  	<td><a href="#/news/add/?id={{news.id}}">编辑</a>&nbsp;<a href="#/news/list/?del=sure&id={{news.id}}">删除</a></td>
+  	</tr>
+  </tbody>
+  <tr>
+  		<td colspan="5" id="page">
+  			
+
+  		</td>
+  	</tr>
+</table>

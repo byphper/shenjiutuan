@@ -12,7 +12,9 @@ if(empty($_SESSION['user'])){
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="../css/bootstrap.css" />
 	<link rel="stylesheet" type="text/css" href="css/main.css" />
-	<script src="../js/angular.js"></script>
+	<script src="../js/angular1.2.9.js"></script>
+	<script src="../js/angular-route.js"></script>
+	<script src="../js/angular-sanitize.js"></script>
 	<script src="../js/jquery-1.9.1.js"></script>
 	<script src="../js/bootstrap.js"></script>
 	<script type="text/javascript" charset="utf-8" src="ueditor/ueditor.config.js"></script>
@@ -20,7 +22,6 @@ if(empty($_SESSION['user'])){
 	    <!--建议手动加在语言，避免在ie下有时因为加载语言失败导致编辑器加载失败-->
 	    <!--这里加载的语言文件会覆盖你在配置项目里添加的语言类型，比如你在配置项目里配置的是英文，这里加载的中文，那最后就是中文-->
 	<script type="text/javascript" charset="utf-8" src="ueditor/lang/zh-cn/zh-cn.js"></script>
-	<script src="ckeditor/ckeditor.js"></script>
 	<script src="js/app.js"></script>
 </head>
 <body>
@@ -47,8 +48,8 @@ if(empty($_SESSION['user'])){
 		<div id="con">
 			<div id="left">
 				<div class="list-group">
-					<a href="#addNews" class="list-group-item active">新闻公告</a>
-					<a href="#" class="list-group-item">会员管理</a>
+					<a href="#/news/list" class="list-group-item active">新闻公告</a>
+					<a href="#/user" class="list-group-item">会员管理</a>
 					<a href="#" class="list-group-item">组织看球</a>
 					<a href="#" class="list-group-item">组织聚会</a>
 					<a href="#" class="list-group-item">跟車地點</a>

@@ -1,0 +1,13 @@
+
+<form method="POST">
+		标题：<input type="text" ng-model="news.title" class="form-control" name="title" style="width:400px;height:30px;"/><br/>
+		<span style="cursor:pointer" ng-click="public()">是否公开</span>:<input type="checkbox" ng-model="news.isPublic" name="isPublic" value="true" />
+		
+		<div id="warp_editor">
+			<script id="editor" name="cnm" type="text/plain" style="width:1024px;height:400px;">
+					
+			</script>
+		</div><br />
+
+		<input type="submit" ng-click="submit()" value="{{type}}" class="btn btn-info" />
+</form>
