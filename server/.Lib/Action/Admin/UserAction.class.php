@@ -34,7 +34,7 @@ class UserAction extends BaseAction {
                         $this->setSession('user',$userinfo);
                         $userModel->updateFiled(array("last_ip"=>$this->get_ip(),"last_date"=>date("Y-m-d H:i:s"),time()),array("email"=>$userinfo['email'],"id"=>$userinfo["id"]));
 
-                        header("location:".BACKPATH."main.php");
+                        header("location:".BACKPATH."main.php#/news/list");
 
                     } else {
                         $this->alert(BACKPATH."login.php","用户名或者密码错误!");
@@ -125,6 +125,43 @@ class UserAction extends BaseAction {
         echo $this->echoJsonMsg($data);
 
 	}
+
+	public function getOneUser(){
+		$id=intval($_GET['id']);
+          if(!is_numeric($id)){
+             echo "-1";
+          }
+         $newsModel=D("User");
+         $data=$newsModel->getOne(array("id"=>$id));
+      
+         if(!empty($data)){
+            echo $this->echoJsonMsg($data);
+            exit;
+         }
+         echo "-1";
+
+	}
+
+	public function update(){
+         $post=$this->getInputData();
+         $msg=array();
+         $id=intval($post['id']);
+          if(!is_numeric($id)){
+              $msg['status']=0;
+              $msg['msg']="修改失敗";
+          }
+        $userModel=D("User");
+        $result=$userModel->updateFiled($post,array("id"=>$id));
+        if($result===false){
+            $msg['status']=0;
+            $msg['msg']="修改失敗";
+        }else{
+            $msg['status']=1;
+            $msg['msg']="修改成功";
+        }
+        echo $this->echoJsonMsg($msg);
+
+    }
 
 
 }

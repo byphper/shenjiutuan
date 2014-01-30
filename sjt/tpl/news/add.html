@@ -1,4 +1,14 @@
-
+<style type="text/css" media="screen">
+ #add_news{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+	width: 1100px;
+ } 
+</style>
+<div id="add_news">
 <form method="POST">
 		标题：<input type="text" ng-model="news.title" class="form-control" name="title" style="width:400px;height:30px;"/><br/>
 		<span style="cursor:pointer" ng-click="public()">是否公开</span>:<input type="checkbox" ng-model="news.isPublic" name="isPublic" value="true" />
@@ -11,3 +21,4 @@
 
 		<input type="submit" ng-click="submit()" value="{{type}}" class="btn btn-info" />
 </form>
+</div>

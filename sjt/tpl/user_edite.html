@@ -1,0 +1,19 @@
+<style type="text/css" media="screen">
+ #usered{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+
+ } 
+</style>
+<div id="usered">
+  昵称:<input type="text" class="form-control" ng-model="user.nickname"><br/>
+  邮箱:<input type="text" class="form-control" ng-model="user.email"><br/>
+  电话:<input type="text" class="form-control" ng-model="user.tel"><br/>
+  内部会员:<input type="checkbox" ng-model="user.isVip" value="true"><br /><br />
+  年票会员:<input type="checkbox" ng-model="user.isYear" value="true"><br /><br />
+  管理员员:<input type="checkbox" ng-model="user.isAdmin" value="true"><br /><br />
+  <input type="submit" class="btn btn-info" ng-click="modify()" value="确认修改" />
+</div>

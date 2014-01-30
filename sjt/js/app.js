@@ -22,8 +22,10 @@ app.config(['$routeProvider',
                 return 'tpl/news/' + params.curd + '.html';
             },
             controller: 'newsCtrl'
-        }).when('/user', {
-            templateUrl: 'tpl/user_info.html',
+        }).when('/user/:curd', {
+            templateUrl: function(parms){
+                return 'tpl/'+parms.curd+'.html';
+            },
             controller: 'userCtrl'
         });
     }
@@ -31,17 +33,46 @@ app.config(['$routeProvider',
 
 
 //會員管理controller
-app.controller('userCtrl', ['$scope', '$http', '$location','$routeParams',
-    function($scope, $http, $location,$routeParams) {
-        var curd = $routeParams.del;
+app.controller('userCtrl', ['$scope', '$http', '$location', '$routeParams',
+    function($scope, $http, $location, $routeParams) {
+        var curd = $routeParams.curd;
 
-        var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/user/ajaxGetUsers?page=1";
-        $http.get($url).success(function(data) {
-                $scope.users = data.data;
-                $scope.page = data.page;
-                $("#page").html(data.page);
+        $scope.modify=function(){
+            var $url="../index.php/Admin/user/update";
+            $http.post($url,$scope.user).success(function(data){
+                    if(data=='0'){
+                        alert(data.msg)
+                    }else{
+                        alert(data.msg);
+                        $location.path("/user/user_info");
+                    }
+            });
 
-        });
+        }
+        switch (curd) {
+            case 'user_edite':
+                 var id=$routeParams.id;
+                 var $url="../index.php/Admin/user/getOneUser?id="+id;
+                 $http.get($url).success(function(data) {
+                    if(data!='-1'){
+                        $scope.user = data[0]; 
+                        $scope.user.isVip = data[0].isVip == 1 ? true : false;
+                        $scope.user.isYear = data[0].isYear == 1 ? true : false;
+                        $scope.user.isAdmin = data[0].isAdmin == 1 ? true : false;
+                    }
+                   
+                });
+                break;
+            default:
+                var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/user/ajaxGetUsers?page=1";
+                $http.get($url).success(function(data) {
+                    $scope.users = data.data;
+                    $scope.page = data.page;
+                    $("#page").html(data.page);
+                });
+
+        }
+
     }
 ]);
 
@@ -55,7 +86,7 @@ app.controller('newsCtrl', ['$scope', '$http', '$location', '$routeParams', '$co
         }
         switch (curd) {
             case 'list':
-                if ($routeParams.del=='sure') {
+                if ($routeParams.del == 'sure') {
                     $delid = $routeParams.id;
                     if ($delid = parseInt($delid)) {
                         var dUrl = "../index.php/Admin/news/delOneNews?id=" + $delid;
@@ -85,18 +116,18 @@ app.controller('newsCtrl', ['$scope', '$http', '$location', '$routeParams', '$co
                     mdUrl = "../index.php/Admin/news/update";
                     $scope.news.id = id;
 
-                    $http.get("../index.php/Admin/news/getOneNews?id="+id).success(function(data) {
+                    $http.get("../index.php/Admin/news/getOneNews?id=" + id).success(function(data) {
                         $scope.news.title = data[0].title;
-                        $scope.news.isPublic = data[0].status==1?true:false;
+                        $scope.news.isPublic = data[0].status == 1 ? true : false;
                         $("#editor").html(data[0].content);
-                         $scope.type = "確認修改";
+                        $scope.type = "確認修改";
                         $scope.ueObj = UE.getEditor('editor');
                     });
 
                 } else {
                     $scope.news.isPublic = true;
                     $scope.type = "确认添加";
-                     $scope.ueObj = UE.getEditor('editor');
+                    $scope.ueObj = UE.getEditor('editor');
                 }
 
                 $scope.public = function() {

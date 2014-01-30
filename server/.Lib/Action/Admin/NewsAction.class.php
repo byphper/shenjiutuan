@@ -49,6 +49,7 @@ class NewsAction extends BaseAction {
           }
          $newsModel=D("News");
          $data=$newsModel->getOne(array("id"=>$id));
+       
          if(!empty($data)){
             echo $this->echoJsonMsg($data);
          }

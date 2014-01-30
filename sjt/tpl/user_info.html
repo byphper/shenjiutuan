@@ -1,4 +1,14 @@
-
+<style type="text/css" media="screen">
+ #userlist{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+  width: 1250px;
+ } 
+</style>
+<div id="userlist">
 <table class="table" style="width:1200px;">
   <tr style="color:#428BCA;font-weight:bold;font-size:16px">
   	<td>id</td>
@@ -21,7 +31,7 @@
       <td>{{user.isYear==1?'yes':'no'}}</td>
       <td>{{user.isAdmin==1?'yes':'no'}}</td>
       <td>{{user.joindate}}</td>
-	  	<td><a href="#/news/add/?id={{news.id}}">编辑</a>&nbsp;<a href="#/user/?del=sure&id={{user.id}}">删除</a></td>
+	  	<td><a href="#/user/user_edite?&id={{user.id}}">编辑</a>&nbsp;<a href="#/user/?id={{user.id}}">删除</a></td>
 
   	</tr>
   </tbody>
@@ -32,3 +42,4 @@
   		</td>
   	</tr>
 </table>
+</div>
