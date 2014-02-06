@@ -1,0 +1,25 @@
+<include file="./server/.Tpl/public/head.html" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/newsdetails.css" />
+	<div class="center">
+		<div id="news">
+			<div id="news_nav">
+				<a href="newslist.html">新闻通告</a>&nbsp;>&nbsp;<span style="font-size:12px;color:#c03e3e">正文</span>
+			</div>
+			<div id="news_con">
+ 				<div id="news_title">
+ 					{$data[0].title}
+ 				</div>
+ 				<div id="news_meta">
+ 					{$data[0].date}&emsp; 作者:{$data[0].user}&emsp; 浏览量:{$data[0].views}
+ 				</div>
+ 				<div id="news_body">
+ 					{$data[0].content}
+
+
+ 				</div>
+			</div>
+		</div>
+	</div>
+<include file="./server/.Tpl/public/footer.html" />	
+
+	

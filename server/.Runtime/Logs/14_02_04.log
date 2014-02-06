@@ -1,0 +1,314 @@
+[ 2014-02-04T00:56:10+08:00 ] ERR: (ThinkException) XML标签语法错误
+[ 2014-02-04T01:42:14+08:00 ] ERR: (ThinkException) 无法加载模块:User
+[ 2014-02-04T01:46:10+08:00 ] ERR: (ThinkException) 无法加载模块:User
+[ 2014-02-04T18:57:53+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003418s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000561s ]
+NOTIC: [2] Missing argument 3 for UserModel::finalCheck(), called in D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Action\Home\UserAction.class.php on line 49 and defined D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant isAdmin - assumed 'isAdmin' D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 21 行.
+NOTIC: [8] Undefined variable: isAdmin D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 22 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 and isAdmin='' LIMIT 1   [ RunTime:0.000210s ]
+
+[ 2014-02-04T18:58:00+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001160s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001329s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003635s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000221s ]
+NOTIC: [2] Missing argument 3 for UserModel::finalCheck(), called in D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Action\Home\UserAction.class.php on line 49 and defined D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant isAdmin - assumed 'isAdmin' D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 21 行.
+NOTIC: [8] Undefined variable: isAdmin D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 22 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 and isAdmin='' LIMIT 1   [ RunTime:0.000218s ]
+
+[ 2014-02-04T18:58:34+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002520s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000223s ]
+NOTIC: [2] Missing argument 3 for UserModel::finalCheck(), called in D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Action\Home\UserAction.class.php on line 49 and defined D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 19 行.
+NOTIC: [8] Use of undefined constant isAdmin - assumed 'isAdmin' D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 21 行.
+NOTIC: [8] Undefined variable: isAdmin D:\develop_tools\xampp\htdocs\shenjiutuan\server\.Lib\Model\UserModel.class.php 第 22 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 and isAdmin='' LIMIT 1   [ RunTime:0.000227s ]
+
+[ 2014-02-04T19:01:01+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001100s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003013s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000248s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000224s ]
+
+[ 2014-02-04T19:02:06+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002646s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000213s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000229s ]
+
+[ 2014-02-04T19:02:34+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000595s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002929s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000234s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000221s ]
+
+[ 2014-02-04T19:02:53+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001697s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.004325s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000254s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000214s ]
+
+[ 2014-02-04T19:03:18+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000470s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000865s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002835s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000218s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000238s ]
+
+[ 2014-02-04T19:05:36+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000857s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002570s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000214s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000223s ]
+
+[ 2014-02-04T19:05:55+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001023s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002575s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000226s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000220s ]
+
+[ 2014-02-04T19:24:42+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000769s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001416s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.007599s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000284s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000740s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 19:24:42' WHERE email='123@163.com' and id='1'  [ RunTime:0.066438s ]
+
+[ 2014-02-04T19:26:57+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.004573s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000229s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000227s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 19:26:57' WHERE email='123@163.com' and id='1'  [ RunTime:0.055055s ]
+
+[ 2014-02-04T19:35:03+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.001040s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002587s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.004430s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000192s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000170s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 19:35:03' WHERE email='123@163.com' and id='1'  [ RunTime:0.044192s ]
+
+[ 2014-02-04T19:46:46+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2014-02-04T19:46:47+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2014-02-04T19:46:52+08:00 ] ERR: (ThinkException) 非法操作:index
+[ 2014-02-04T19:47:02+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-04T19:47:06+08:00 ] ERR: (ThinkException) 非法操作:index.php
+[ 2014-02-04T19:47:19+08:00 ] ERR: (ThinkException) 非法操作:index.php
+[ 2014-02-04T19:47:26+08:00 ] ERR: (ThinkException) 非法操作:index.php
+[ 2014-02-04T19:47:27+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-04T19:47:27+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-04T19:47:28+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-04T19:47:43+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-04T19:47:48+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:47:49+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:48:07+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000402s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.004931s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000242s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000240s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 19:48:07' WHERE email='123@163.com' and id='1'  [ RunTime:0.050448s ]
+
+[ 2014-02-04T19:48:14+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:48:16+08:00 ] ERR: (ThinkException) 无法加载模块:Index.php
+[ 2014-02-04T19:49:39+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:49:40+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:50:00+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:50:05+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:50:10+08:00 ] ERR: (ThinkException) 无法加载模块:Index.php
+[ 2014-02-04T19:50:11+08:00 ] ERR: (ThinkException) 无法加载模块:Index.php
+[ 2014-02-04T19:50:13+08:00 ] ERR: (ThinkException) 无法加载模块:Index.php
+[ 2014-02-04T19:50:30+08:00 ] ERR: (ThinkException) 无法加载模块:Index.php
+[ 2014-02-04T19:51:30+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:51:39+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000910s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000822s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002585s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000227s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000229s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 19:51:39' WHERE email='123@163.com' and id='1'  [ RunTime:0.038031s ]
+
+[ 2014-02-04T19:51:39+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:52:01+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:52:39+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:52:41+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:52:45+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:55:42+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:56:24+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:56:45+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:58:06+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T19:58:09+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:00:03+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:03:08+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:03:40+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:04:15+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:07:03+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:15:49+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:16:11+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002008s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002677s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@123.com'  LIMIT 0,1   [ RunTime:0.000246s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='福田-影帝'  LIMIT 0,1   [ RunTime:0.000197s ]
+
+[ 2014-02-04T20:16:11+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:16:23+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:17:12+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000813s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001053s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002926s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@123.com'  LIMIT 0,1   [ RunTime:0.000224s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='12313'  LIMIT 0,1   [ RunTime:0.000131s ]
+
+[ 2014-02-04T20:17:45+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:18:34+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:19:01+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001347s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002437s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@123.com'  LIMIT 0,1   [ RunTime:0.000197s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='深圳-影帝1'  LIMIT 0,1   [ RunTime:0.000150s ]
+
+[ 2014-02-04T20:19:02+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:27:16+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:29:19+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:30:28+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:31:55+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:32:13+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000880s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001229s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003134s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@123.com'  LIMIT 0,1   [ RunTime:0.000304s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='布吉-老大哥'  LIMIT 0,1   [ RunTime:0.000190s ]
+SQL: INSERT INTO `userinfo` (`email`,`pwd`,`nickname`,`isVip`,`isYear`,`isAdmin`,`joindate`,`status`,`last_date`,`last_ip`) VALUES ('123@123.com','e10adc3949ba59abbe56e057f20f883e','布吉-老大哥',0,0,0,'2014-02-04 20:32:13',1,'2014-02-04 20:32:13','::1') [ RunTime:0.071601s ]
+
+[ 2014-02-04T20:32:13+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:32:51+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:32:58+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001115s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002993s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@123.com' LIMIT 1   [ RunTime:0.000241s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@123.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000260s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-04 20:32:58' WHERE email='123@123.com' and id='2'  [ RunTime:0.080482s ]
+
+[ 2014-02-04T20:32:59+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:33:20+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:33:42+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T20:36:55+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T21:21:32+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T21:21:33+08:00 ] ERR: (ThinkException) 无法加载模块:Newslist
+[ 2014-02-04T21:21:35+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T21:24:02+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T21:24:43+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T21:24:53+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T23:58:52+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000740s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003435s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@aa.com'  LIMIT 0,1   [ RunTime:0.000246s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='龙华-小妹儿'  LIMIT 0,1   [ RunTime:0.000162s ]
+SQL: INSERT INTO `userinfo` (`email`,`pwd`,`nickname`,`isVip`,`isYear`,`isAdmin`,`joindate`,`status`,`last_date`,`last_ip`) VALUES ('123@aa.com','e10adc3949ba59abbe56e057f20f883e','龙华-小妹儿',0,0,0,'2014-02-04 23:58:52',1,'2014-02-04 23:58:52','::1') [ RunTime:0.049219s ]
+
+[ 2014-02-04T23:58:53+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon
+[ 2014-02-04T23:58:59+08:00 ] ERR: (ThinkException) 无法加载模块:Favicon

@@ -27,7 +27,25 @@ app.config(['$routeProvider',
                 return 'tpl/'+parms.curd+'.html';
             },
             controller: 'userCtrl'
+        }).when('/ball/:curd', {
+            templateUrl: function(parms){
+                return 'tpl/'+parms.curd+'.html';
+            },
+            controller: 'ballCtrl'
         });
+    }
+]);
+
+//球票預定管理controller
+app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
+    function($scope, $http, $location, $routeParams) {
+        var curd = $routeParams.curd;
+        $scope.addMatch=function(){
+            $location.path("/ball/add_match");
+        }
+        $scope.add=function(){
+            console.dir( $scope.ball);
+        }
     }
 ]);
 

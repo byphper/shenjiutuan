@@ -18,13 +18,13 @@ abstract class BaseModel extends Model{
 	}
 	
 	
-	public function getPage($page,$nums,$where,$filed=true){
+	public function getPage($page,$nums,$where,$order,$filed=true){
 		if(empty($page)||empty($nums)){
 			return false;
 		}
 		$whereString=$this->getWhere($where);
 		
-		return $this->where($whereString)->page($page,$nums)->field($filed)->select();
+		return $this->where($whereString)->page($page,$nums)->field($filed)->order($order)->select();
 	}
 
 	public function getOne($where,$filed=true){
@@ -53,6 +53,12 @@ abstract class BaseModel extends Model{
 		 	return $whereString;
 		 }
 		 return false;
+	}
+
+	public function addData($data=array()){
+		if(!empty($data)){
+			return $this->add($data);
+		}
 	}
 
 }

@@ -1,9 +1,10 @@
 <?php
 session_start();
-if(empty($_SESSION['user'])){
+if(empty($_SESSION['user'])||$_SESSION['user']['isAdmin']!=1){
 	header("location:login.php");
 	exit;	
 }
+
 ?>
 <!doctype html>
 <html ng-app="SjtBack">
@@ -51,11 +52,10 @@ if(empty($_SESSION['user'])){
 				<div class="list-group">
 					<a href="#/news/list" class="list-group-item active">新闻公告</a>
 					<a href="#/user/user_info" class="list-group-item">会员管理</a>
-					<a href="#" class="list-group-item">组织看球</a>
+					<a href="#/ball/ball_list" class="list-group-item">组织看球</a>
 					<a href="#" class="list-group-item">组织聚会</a>
 					<a href="#" class="list-group-item">跟車地點</a>
-					<a href="#" class="list-group-item">图片管理</a>
-					<a href="#" class="list-group-item" onclick="UE.getEditor('editor')">视频管理</a>
+					
 				</div>
 
 			</div>

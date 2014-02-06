@@ -1,0 +1,34 @@
+<style type="text/css" media="screen">
+ #balllist{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+  width: 850px;
+ } 
+</style>
+<div id="balllist">
+  <input type="button" class="btn btn-info" value="添加比賽信息" ng-click="addMatch()"/><br /><br />
+<table class="table" style="width:800px;">
+  <tr style="color:#428BCA;font-weight:bold;font-size:16px">
+  	<td>标题</td>
+  	<td>状态</td>
+  	<td>操作</td>
+  </tr>
+  <tbody ng-repeat="user in users">
+  	<tr style="color:gray">
+      <td>{{user.isYear==1?'yes':'no'}}</td>
+      <td>{{user.isAdmin==1?'yes':'no'}}</td>
+	  	<td><a href="#/user/user_edite?&id={{user.id}}">编辑</a>&nbsp;<a href="#/user/?id={{user.id}}">删除</a></td>
+
+  	</tr>
+  </tbody>
+  <tr>
+  		<td colspan="5" id="page">
+  			
+
+  		</td>
+  	</tr>
+</table>
+</div>

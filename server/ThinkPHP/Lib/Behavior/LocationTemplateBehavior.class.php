@@ -14,13 +14,14 @@ defined('THINK_PATH') or exit();
  * 系统行为扩展：定位模板文件
  * @category   Think
  * @package  Think
- * @subpackage  Behavior
+ * @subpackage  Behavi25or
  * @author   liu21st <liu21st@gmail.com>
  */
 class LocationTemplateBehavior extends Behavior {
     // 行为扩展的执行入口必须是run
     public function run(&$templateFile){
         // 自动定位模板文件
+
         if(!file_exists_case($templateFile))
             $templateFile   = $this->parseTemplateFile($templateFile);
     }
@@ -48,6 +49,7 @@ class LocationTemplateBehavior extends Behavior {
             $depr = defined('GROUP_NAME')?C('TMPL_FILE_DEPR'):'/';
             $templateFile  =  $path.$module.$depr.$action.C('TMPL_TEMPLATE_SUFFIX');
         }
+       
         if(!file_exists_case($templateFile))
             throw_exception(L('_TEMPLATE_NOT_EXIST_').'['.$templateFile.']');
         return $templateFile;

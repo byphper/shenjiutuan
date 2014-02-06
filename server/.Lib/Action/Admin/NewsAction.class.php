@@ -34,7 +34,7 @@ class NewsAction extends BaseAction {
        
         $newsModel=D("News");
         $count=$newsModel->count();
-        $data=$newsModel->getPage($page,15,'',array("id","title","status","date"));
+        $data=$newsModel->getPage($page,15,'','id desc',array("id","title","status","date"));
         $pager=new Page($count,15,"setPage","changePage");
 
         $data=array("data"=>$data,"page"=>$pager->fpage());

@@ -1,0 +1,33 @@
+<include file="./server/.Tpl/public/head.html" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/news.css" />
+	<div class="center">
+		<div id="news">
+			<div id="newsleft" class="newslist">
+				<div>
+		
+					<foreach name="data" item="vo">
+
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="__APP__/News/getOneNews?id={$vo.id}">{$vo.title}</a>
+							</li>
+						</div>
+						<div class="rightD"> {$vo.date|substr=0,11}</div>
+						<div style="clear:left"></div>
+					</div>
+
+					</foreach>
+					
+					
+					
+					
+				</div>
+			</div>
+			<div id="newsright" class="newslist">
+			</div>
+			<div style="clear:left"></div>
+		</div>
+	</div>
+<include file="./server/.Tpl/public/footer.html" />
+	

@@ -1,0 +1,26 @@
+<style type="text/css" media="screen">
+ #usered{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+
+ } 
+</style>
+<div id="usered">
+  标题:<input type="text" required class="form-control" style="width:350px" ng-model="ball.title">
+  对手:<input type="text" required class="form-control" ng-model="ball.opponent">
+  时间:<input type="text" required class="form-control" ng-model="ball.time">
+  地点:<input type="text" required class="form-control" ng-model="ball.address">
+  球票价格:<input type="text" required class="form-control" ng-model="ball.ticket">
+  跟车费用:<input type="text" required class="form-control" ng-model="ball.car"><br />
+  状态：<select style="color:red" ng-model='ball.status'>
+          <option value='0' checked='checked'>未开放</option>
+          <option value='1'>开始报名</option>
+          <option value='2'>已结束</option>
+      </select>
+  <br /><br />
+  
+  <input type="submit" class="btn btn-info" ng-click="add()" value="确认添加" />
+</div>

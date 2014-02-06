@@ -1,0 +1,147 @@
+html,body{
+	margin: 0px;
+	padding: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url("../img/bg.gif");
+	
+}
+.center{
+	width: 960px;
+	margin: 0 auto;
+	
+}
+#top{
+	width: 100%;
+	height:31px;
+	background-image: url("../img/top_bg.jpg");
+	color: #E9E9E9;
+
+}
+.custom{
+	background-color: #b60b0b;
+	border: none;
+	color: #e9f4f2;
+}
+.custom:hover, .btn:focus{
+	color: white;
+	background-color: #d04b4b;
+	font-weight: bold;
+
+}
+#top_con{
+	width: 960px;
+	height: 31px;
+	margin: 0 auto;
+	
+}
+#slogan{
+	line-height:30px;
+	vertical-align:middle;
+	
+	font-weight: bold;
+	letter-spacing:10px;
+}
+.xubox_main{
+	border: 2px solid red;
+	border-radius: 8px;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+	-webkit-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+	transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+#login_info{
+	float: right;
+}
+
+#login_info span{
+	line-height:30px;
+	vertical-align:middle;
+}
+
+#con_log{
+	height: 120px;
+	background-image: url("../img/log_bg.jpg");
+	padding-top: 20px;
+}
+#con_nav{
+	height: 40px;
+	background-image: url("../img/nav_bg.jpg");
+}
+#official{
+	margin-left: 150px;
+	font-weight: bold;
+	color: red;
+	font-size: 20px;
+	line-height: 40px;
+}
+#foot{
+	width: 100%;
+	height:150px;
+	background-color: #dc1b1b;
+	margin-top: 10px;
+}
+
+#foot_center{
+	width: 960px;
+	margin: 0 auto;
+	color: white;
+	text-align: center;
+	padding-top: 10px;
+	line-height: 28px;
+}
+
+#foot_center a{
+	margin-left: 15px;
+	color: white;
+	font-size: 12px;
+	color:#f1d6d6;
+}
+#foot_center table{
+	margin: 0 auto;
+}
+#foot_center td{
+	text-align: left;
+}
+
+#foot_center a:hover{
+	color: #f4fc12;
+	text-decoration: none;
+}
+.nav_item{
+	float: left;
+	list-style: none;
+	margin-left: 40px;
+	line-height: 40px;
+
+}
+.nav_item a{
+	color: #E9E9E9;
+	
+}
+.nav_item a:hover{
+	color:#f4fc12;
+	text-decoration: none;
+}
+/*------*/
+#con_intr{
+	height: 5px;
+	
+}
+#con_img{
+	height: 500px;
+	background-color: gray;
+}
+#demo1{
+	width: 960px;
+	height: 500px;
+}
+.nickname{
+	text-decoration: none;
+	color: #E9E9E9;
+}
+.nickname:hover{
+	color:white;
+	text-decoration: none;
+}

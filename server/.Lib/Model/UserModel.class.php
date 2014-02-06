@@ -16,10 +16,14 @@ class UserModel extends BaseModel{
 	}
 	
 	
-	public function finalCheck($user,$pwd,$isAdmin){
+	public function finalCheck($user,$pwd,$isAdmin=1){
 		 $pwd=md5($pwd);
-
-		 $userinfo=$this->where("email='{$user}' and pwd='{$pwd}' and isAdmin='{$isAdmin}'")->find();
+		 if($isAdmin){
+		 	$userinfo=$this->where("email='{$user}' and pwd='{$pwd}' and status=1 and isAdmin='{$isAdmin}'")->find();
+		 }else{
+		 	$userinfo=$this->where("email='{$user}' and pwd='{$pwd}' and status=1")->find();
+		 }
+		 
 		 return empty($userinfo)?false:$userinfo;
 	}
 	

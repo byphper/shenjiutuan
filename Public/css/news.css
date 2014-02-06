@@ -1,0 +1,52 @@
+
+/*------*/
+#news{
+	margin-top: 3px;
+	padding-left: 20px;
+	border: 1px solid #ecd9d9;
+	-moz-border-radius: 10px;      /* Gecko browsers */
+    -webkit-border-radius: 10px;   /* Webkit browsers */
+    border-radius:10px;  
+    min-height: 330px;
+   
+}
+
+#news li{
+	list-style:disc;
+	color: red;
+	width: 100%;
+}
+#newsleft{
+	float: left;
+	width: 55%;
+	line-height: 30px;
+	padding-bottom: 20px;
+}
+#newsright{
+	float: right;
+	width: 40%;
+	height: 330px;
+	background-image: url("../img/lipi2.png");
+	margin-top: 10px;
+	margin-right: 5px;
+}
+.leftA{
+	float: left;
+	width: 80%;
+}
+.rightD{
+	float: right;
+	color:red;
+	padding-right: 5px;
+}
+.leftA a{
+	color:#c03e3e;
+}
+.leftA a:hover{
+	text-decoration: none;
+	color:#b2b016;
+}
+.newsitem{
+	border-bottom: 1px solid #f8dbe2;
+	margin-top: 5px;
+}
