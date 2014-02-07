@@ -1,0 +1,14 @@
+[ 2014-02-07T10:40:36+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:36+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-07T10:40:43+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:48+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:52+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:55+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:57+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:40:59+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:41:02+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T10:41:04+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-07T15:36:18+08:00 ] ERR: (ThinkException) Action:getInputData您所请求的方法不存在！
+[ 2014-02-07T15:44:52+08:00 ] ERR: (ThinkException) Table 'sjt.balltickets' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `balltickets`
+[ 2014-02-07T16:17:02+08:00 ] ERR: (ThinkException) 非法操作:ajaxgetball

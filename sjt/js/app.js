@@ -13,7 +13,7 @@ app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/', {
-
+            templateUrl:'tpl/welcome.html'
         }).when('/modifyPwd', {
             templateUrl: 'tpl/modify_pwd.html',
             controller: 'modifypwdCtrl'
@@ -39,12 +39,57 @@ app.config(['$routeProvider',
 //球票預定管理controller
 app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
     function($scope, $http, $location, $routeParams) {
-        var curd = $routeParams.curd;
+        var id = $routeParams.id;
+        var curd= $routeParams.curd;
+
+        var $url="../index.php/Admin/ball/add";
+        if(curd=='ball_list'){
+            var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/ball/ajaxGetBalls?page=1";
+                $http.get($url).success(function(data) {
+                    $scope.ball = data.data;
+                    $scope.page = data.page;
+
+                    $("#page").html(data.page);
+                });
+              
+        }else if (curd="add_match") {
+            if(id=parseInt(id)){
+                $url="../index.php/Admin/ball/update";
+                $http.get("../index.php/Admin/ball/getOneBall?id="+id).success(function(data){
+                   if(data!='-1'){
+                        $scope.ball={};
+                        $scope.ball.title=data[0].title;
+                        $scope.ball.match_op=data[0].match_op;
+                        $scope.ball.match_address=data[0].match_address;
+                        $scope.ball.ticket_cost=data[0].ticket_cost;
+                        $scope.ball.car_cost=data[0].car_cost;
+                        $scope.ball.status=data[0].status;
+                        $("#match_time").val(data[0].match_time);
+                        $scope.type="确认修改";
+                   }
+
+                });
+             }else{
+                 $scope.type="确认添加";
+             }
+        }
+
         $scope.addMatch=function(){
             $location.path("/ball/add_match");
         }
+
         $scope.add=function(){
-            console.dir( $scope.ball);
+
+            $date=$("#match_time").val();
+            $scope.ball.match_time=$date;
+            $scope.ball.id=id;
+            $http.post($url,$scope.ball).success(function(data){
+                    if(data.status){
+                        $location.path("/ball/ball_list");
+                    }else{
+                        alert(data.msg);
+                    }
+            });
         }
     }
 ]);

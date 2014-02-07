@@ -46,6 +46,7 @@ class NewsAction extends BaseAction {
          $id=intval($_GET['id']);
           if(!is_numeric($id)){
              echo "-1";
+             exit;
           }
          $newsModel=D("News");
          $data=$newsModel->getOne(array("id"=>$id));
