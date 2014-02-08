@@ -16,7 +16,7 @@
   地点:<input type="text" required class="form-control" ng-model="ball.match_address">
   球票价格:<input type="text" required class="form-control" ng-model="ball.ticket_cost">
   跟车费用:<input type="text" required class="form-control" ng-model="ball.car_cost"><br />
-  状态：<select style="color:red" ng-model='ball.status'>
+  状态：<select class="form-control" style="color:red" ng-init="ball.status=0" ng-model='ball.status'>
           <option value='0' checked='checked'>未开放</option>
           <option value='1'>开始报名</option>
           <option value='2'>已结束</option>

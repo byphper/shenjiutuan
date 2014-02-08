@@ -2,11 +2,6 @@
 
 class UserAction extends BaseAction {
 
-	public function __construct(){
-		
-	
-	}
-
 	/**
 	*	帳號檢測
 	*/

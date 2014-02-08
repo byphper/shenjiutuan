@@ -54,7 +54,7 @@ if(empty($_SESSION['user'])||$_SESSION['user']['isAdmin']!=1){
 					<a href="#/news/list" class="list-group-item active">新闻公告</a>
 					<a href="#/user/user_info" class="list-group-item">会员管理</a>
 					<a href="#/ball/ball_list" class="list-group-item">组织看球</a>
-					<a href="#" class="list-group-item">组织聚会</a>
+					<a href="#/party/party_list" class="list-group-item">组织聚会</a>
 					<a href="#" class="list-group-item">跟車地點</a>
 					
 				</div>

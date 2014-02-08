@@ -12,8 +12,10 @@ abstract class BaseModel extends Model{
 		return $result;
 	}
 
-	public function getAll(){
-		$data=$this->select();
+	public function getAll($where=array()){
+		$whereString=$this->getWhere($where);
+		$whereString=empty($whereString)?"1=1":$whereString;
+		$data=$this->where($whereString)->select();
 		return empty($data)?false:$data;
 	}
 	

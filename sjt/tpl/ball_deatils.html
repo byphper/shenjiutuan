@@ -1,0 +1,38 @@
+<style type="text/css" media="screen">
+ #balldeatils{
+  margin-left: 1px;
+  border: 5px solid #dedede;
+  -moz-border-radius: 15px;
+  -webkit-border-radius: 15px;
+  padding: 10px;
+  width: 850px;
+ } 
+</style>
+<div id="balldeatils">
+  <input type="button" value="下载成excel文件" class="btn btn-info" />
+  <table style="width:800px;line-height:30px;">
+    <caption style="font-size:18px;">{{title}}</caption>
+    <thead>
+      <tr style="color:red;font-weight:bold;font-size:16px">
+        <th>昵称</th>
+        <th>人数</th>
+        <th>是否跟车</th>
+        <th>上车地点</th>
+        <th>是否付款</th>
+        <th>报名时间</th>
+        <th>操作</th>
+      </tr>
+    </thead>
+    <tbody ng-repeat="log in logs">
+      <tr>
+        <td>{{log.nickname}}</td>
+        <td>{{log.nums}}</td>
+        <td>{{log.style==1?'是':'否'}}</td>
+        <td>{{log.goadd}}</td>
+        <td>{{log.isPay==1?'是':'否'}}</td>
+        <td>{{log.date}}</td>
+        <td><a href="#/ball/log_edit?&id={{log.id}}">编辑</a>&nbsp;<a href="#/ball/ball_deatils/?lid={{log.id}}&&del=true">删除</a></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

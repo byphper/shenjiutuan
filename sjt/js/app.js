@@ -13,7 +13,7 @@ app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider.
         when('/', {
-            templateUrl:'tpl/welcome.html'
+            templateUrl: 'tpl/welcome.html'
         }).when('/modifyPwd', {
             templateUrl: 'tpl/modify_pwd.html',
             controller: 'modifypwdCtrl'
@@ -23,13 +23,13 @@ app.config(['$routeProvider',
             },
             controller: 'newsCtrl'
         }).when('/user/:curd', {
-            templateUrl: function(parms){
-                return 'tpl/'+parms.curd+'.html';
+            templateUrl: function(parms) {
+                return 'tpl/' + parms.curd + '.html';
             },
             controller: 'userCtrl'
         }).when('/ball/:curd', {
-            templateUrl: function(parms){
-                return 'tpl/'+parms.curd+'.html';
+            templateUrl: function(parms) {
+                return 'tpl/' + parms.curd + '.html';
             },
             controller: 'ballCtrl'
         });
@@ -40,55 +40,105 @@ app.config(['$routeProvider',
 app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
     function($scope, $http, $location, $routeParams) {
         var id = $routeParams.id;
-        var curd= $routeParams.curd;
+        var curd = $routeParams.curd;
 
-        var $url="../index.php/Admin/ball/add";
-        if(curd=='ball_list'){
+        var $url = "../index.php/Admin/ball/add";
+
+        if (curd == 'ball_list') {
+            var del = $routeParams.del;
+            if (del == 'true') {
+                var flag = window.confirm("确认删除？");
+                if (flag) {
+                    if (id = parseInt(id)) {
+                        $http.get("../index.php/Admin/ball/del?id=" + id).success(function(data) {
+                            if (data.status == '-1') {
+                                alert("删除失败!");
+                            } else {
+                                alert("删除成功！");
+                            }
+                            window.location.href = "./main.php#ball/ball_list";
+                        });
+                    }
+                }
+            }
+
             var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/ball/ajaxGetBalls?page=1";
-                $http.get($url).success(function(data) {
-                    $scope.ball = data.data;
-                    $scope.page = data.page;
+            $http.get($url).success(function(data) {
+                $scope.ball = data.data;
+                $scope.page = data.page;
 
-                    $("#page").html(data.page);
-                });
-              
-        }else if (curd="add_match") {
-            if(id=parseInt(id)){
-                $url="../index.php/Admin/ball/update";
-                $http.get("../index.php/Admin/ball/getOneBall?id="+id).success(function(data){
-                   if(data!='-1'){
-                        $scope.ball={};
-                        $scope.ball.title=data[0].title;
-                        $scope.ball.match_op=data[0].match_op;
-                        $scope.ball.match_address=data[0].match_address;
-                        $scope.ball.ticket_cost=data[0].ticket_cost;
-                        $scope.ball.car_cost=data[0].car_cost;
-                        $scope.ball.status=data[0].status;
+                $("#page").html(data.page);
+            });
+
+        } else if (curd == "add_match") {
+            if (id = parseInt(id)) {
+                $url = "../index.php/Admin/ball/update";
+                $http.get("../index.php/Admin/ball/getOneBall?id=" + id).success(function(data) {
+                    if (data != '-1') {
+                        $scope.ball = {};
+                        $scope.ball.title = data[0].title;
+                        $scope.ball.match_op = data[0].match_op;
+                        $scope.ball.match_address = data[0].match_address;
+                        $scope.ball.ticket_cost = data[0].ticket_cost;
+                        $scope.ball.car_cost = data[0].car_cost;
+                        $scope.ball.status = data[0].status;
                         $("#match_time").val(data[0].match_time);
-                        $scope.type="确认修改";
-                   }
+                        $scope.type = "确认修改";
+                    }
 
                 });
-             }else{
-                 $scope.type="确认添加";
-             }
+            } else {
+
+                $scope.type = "确认添加";
+            }
+        } else if (curd == "ball_deatils") {
+            if (id = parseInt(id)) {
+                $http.get("../index.php/Admin/ball/balllog?id=" + id).success(function(data) {
+                    if (data != "-1") {
+                        $scope.logs = data.data;
+                        $scope.title = data.title[0].title;
+                    }
+
+                });
+            }
+        } else if (curd == "log_edit") {
+            if (id = parseInt(id)) {
+                $http.get("../index.php/Admin/ball/getOneBallLog?id=" + id).success(function(data) {
+                    if (data != "-1") {
+                        $scope.log = data[0];
+                    }
+
+                });
+            }
         }
 
-        $scope.addMatch=function(){
+        $scope.edit_log=function(){
+            var $url = "../index.php/Admin/user/update";
+            $http.post($url, $scope.log).success(function(data) {
+                if (data == '0') {
+                    alert(data.msg)
+                } else {
+                    alert(data.msg);
+                    $location.path("/user/user_info");
+                }
+            });
+        }
+
+        $scope.addMatch = function() {
             $location.path("/ball/add_match");
         }
 
-        $scope.add=function(){
+        $scope.add = function() {
 
-            $date=$("#match_time").val();
-            $scope.ball.match_time=$date;
-            $scope.ball.id=id;
-            $http.post($url,$scope.ball).success(function(data){
-                    if(data.status){
-                        $location.path("/ball/ball_list");
-                    }else{
-                        alert(data.msg);
-                    }
+            $date = $("#match_time").val();
+            $scope.ball.match_time = $date;
+            $scope.ball.id = id;
+            $http.post($url, $scope.ball).success(function(data) {
+                if (data.status) {
+                    $location.path("/ball/ball_list");
+                } else {
+                    alert(data.msg);
+                }
             });
         }
     }
@@ -100,30 +150,30 @@ app.controller('userCtrl', ['$scope', '$http', '$location', '$routeParams',
     function($scope, $http, $location, $routeParams) {
         var curd = $routeParams.curd;
 
-        $scope.modify=function(){
-            var $url="../index.php/Admin/user/update";
-            $http.post($url,$scope.user).success(function(data){
-                    if(data=='0'){
-                        alert(data.msg)
-                    }else{
-                        alert(data.msg);
-                        $location.path("/user/user_info");
-                    }
+        $scope.modify = function() {
+            var $url = "../index.php/Admin/user/update";
+            $http.post($url, $scope.user).success(function(data) {
+                if (data == '0') {
+                    alert(data.msg)
+                } else {
+                    alert(data.msg);
+                    $location.path("/user/user_info");
+                }
             });
 
         }
         switch (curd) {
             case 'user_edite':
-                 var id=$routeParams.id;
-                 var $url="../index.php/Admin/user/getOneUser?id="+id;
-                 $http.get($url).success(function(data) {
-                    if(data!='-1'){
-                        $scope.user = data[0]; 
+                var id = $routeParams.id;
+                var $url = "../index.php/Admin/user/getOneUser?id=" + id;
+                $http.get($url).success(function(data) {
+                    if (data != '-1') {
+                        $scope.user = data[0];
                         $scope.user.isVip = data[0].isVip == 1 ? true : false;
                         $scope.user.isYear = data[0].isYear == 1 ? true : false;
                         $scope.user.isAdmin = data[0].isAdmin == 1 ? true : false;
                     }
-                   
+
                 });
                 break;
             default:
@@ -150,17 +200,22 @@ app.controller('newsCtrl', ['$scope', '$http', '$location', '$routeParams', '$co
         switch (curd) {
             case 'list':
                 if ($routeParams.del == 'sure') {
-                    $delid = $routeParams.id;
-                    if ($delid = parseInt($delid)) {
-                        var dUrl = "../index.php/Admin/news/delOneNews?id=" + $delid;
-                        $http.get(dUrl).success(function(data) {
-                            if (data == 1) {
-                                alert('刪除成功');
-                            } else {
-                                alert('刪除失敗');
-                            }
-                        });
+                    var flag = window.confirm("确认删除？");
+                    if (flag) {
+                        $delid = $routeParams.id;
+                        if ($delid = parseInt($delid)) {
+                            var dUrl = "../index.php/Admin/news/delOneNews?id=" + $delid;
+                            $http.get(dUrl).success(function(data) {
+                                if (data == 1) {
+                                    alert('刪除成功');
+                                } else {
+                                    alert('刪除失敗');
+                                }
+                                window.location.href = "./main.php#news/list";
+                            });
+                        }
                     }
+
                 }
 
                 var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/news/ajaxGetNews?page=1";

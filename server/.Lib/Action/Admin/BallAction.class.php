@@ -1,6 +1,7 @@
 <?php
 
-class BallAction extends BaseAction{
+class BallAction extends AdminAction{
+
 	function add(){
 		$post=$this->getInputData();
 		$title=$this->filter($post['title']);
@@ -90,5 +91,51 @@ class BallAction extends BaseAction{
       
         echo $this->echoJsonMsg($msg);
 
+    }
+
+    public function del(){
+    	 $id=intval($_GET['id']);
+          if(!is_numeric($id)){
+             echo "-1";
+          }
+          $BallModel=D("Ball");   
+          $resulst=$BallModel->delOne(array("id"=>$id));
+          if(!empty($resulst)){
+             echo "1";
+          }
+    }
+
+    public function ballLog(){
+    	$id=intval($_GET['id']);
+          if(!is_numeric($id)){
+             echo "-1";
+             exit;
+          }
+         $ballLog=D("BallLog");
+         $data=$ballLog->getAll(array("tid"=>$id));
+         $BallModel=D("Ball"); 
+         $title=$BallModel->getOne($data['tid'],array("title"));
+         $result=array("title"=>$title,"data"=>$data);
+         if(empty($data)){
+         	echo "-1";
+         }else{
+         	echo $this->echoJsonMsg($result);
+         }
+
+    }
+
+    public function getOneBallLog(){
+    	$id=intval($_GET['id']);
+          if(!is_numeric($id)){
+             echo "-1";
+             exit;
+          }
+         $ballLog=D("BallLog");
+         $data=$ballLog->getOne(array("id"=>$id));
+         if(empty($data)){
+         	echo "-1";
+         }else{
+         	echo $this->echoJsonMsg($data);
+         }
     }
 }

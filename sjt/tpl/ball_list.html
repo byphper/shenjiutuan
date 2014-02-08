@@ -18,13 +18,13 @@
   </tr>
   <tbody ng-repeat="b in ball">
   	<tr style="color:gray">
-      <td>{{b.title}}</td>
+      <td><a href="./main.php#ball/ball_deatils?id={{b.id}}?t={{b.title}}">{{b.title}}</a></td>
       <td ng-switch on="b.status">
           <span ng-switch-when="0">未开放</span>
           <span ng-switch-when="1">正在報名</span>
           <span ng-switch-when="2">已結束</span>
       </td>
-	  	<td><a href="#/ball/add_match?&id={{b.id}}">编辑</a>&nbsp;<a href="#/ball/del/?id={{user.id}}">删除</a></td>
+	  	<td><a href="#/ball/add_match?&id={{b.id}}">编辑</a>&nbsp;<a href="#/ball/ball_list/?id={{b.id}}&&del=true">删除</a></td>
 
   	</tr>
   </tbody>
