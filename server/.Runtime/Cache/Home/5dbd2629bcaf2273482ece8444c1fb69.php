@@ -66,25 +66,108 @@
                $('#demo1').slideBox();
             });
     </script>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/newsdetails.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/applylist.css" />
 	<div class="center">
 		<div id="news">
-			<div id="news_nav">
-				<a href="newslist.html">新闻公告</a>&nbsp;>&nbsp;<span style="font-size:12px;color:#c03e3e">正文</span>
+			<div id="newsleft" class="newslist">
+				<div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD"><span style="color:red">正在接受报名</span></div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
+							</li>
+						</div>
+						<div class="rightD">已结束</div>
+						<div style="clear:left"></div>
+					</div>
+					
+					
+				</div>
 			</div>
-			<div id="news_con">
- 				<div id="news_title">
- 					<?php echo ($data[0]["title"]); ?>
- 				</div>
- 				<div id="news_meta">
- 					<?php echo ($data[0]["date"]); ?>&emsp; 作者:<?php echo ($data[0]["user"]); ?>&emsp; 浏览量:<?php echo ($data[0]["views"]); ?>
- 				</div>
- 				<div id="news_body">
- 					<?php echo ($data[0]["content"]); ?>
-
-
- 				</div>
+			<div id="newsright" class="newslist">
 			</div>
+			<div style="clear:left"></div>
 		</div>
 	</div>
 <div id="foot">

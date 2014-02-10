@@ -9,22 +9,22 @@
  } 
 </style>
 <div id="balllist">
-  <input type="button" class="btn btn-info" value="添加比賽信息" ng-click="addMatch()"/><br /><br />
+  <input type="button" class="btn btn-info" value="发布聚会信息" ng-click="addParty()"/><br /><br />
 <table class="table" style="width:800px;">
   <tr style="color:#428BCA;font-weight:bold;font-size:16px">
   	<td>标题</td>
   	<td>状态</td>
   	<td>操作</td>
   </tr>
-  <tbody ng-repeat="b in ball">
+  <tbody ng-repeat="b in party">
   	<tr style="color:gray">
-      <td><a href="./main.php#ball/ball_deatils?id={{b.id}}">{{b.title}}</a></td>
+      <td><a href="./main.php#party/party_logs?id={{b.id}}">{{b.title}}</a></td>
       <td ng-switch on="b.status">
           <span ng-switch-when="0">未开放</span>
           <span ng-switch-when="1">正在報名</span>
           <span ng-switch-when="2">已結束</span>
       </td>
-	  	<td><a href="#/ball/add_match?id={{b.id}}">编辑</a>&nbsp;<a href="#/ball/ball_list/?id={{b.id}}&del=true">删除</a></td>
+	  	<td><a href="#/party/add_party?id={{b.id}}">编辑</a>&nbsp;<a href="#/party/party_list/?id={{b.id}}&del=true">删除</a></td>
 
   	</tr>
   </tbody>

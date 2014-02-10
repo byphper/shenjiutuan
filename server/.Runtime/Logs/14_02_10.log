@@ -1,0 +1,101 @@
+[ 2014-02-10T13:14:14+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:14:14+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:14:17+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:14:17+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:14:20+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:14:20+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:14:21+08:00 ] ERR: (ThinkException) 非法操作:applydetails
+[ 2014-02-10T13:14:22+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:14:22+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:23:02+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:23:02+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:23:09+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:23:09+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:23:11+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:23:11+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:25:20+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000835s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002502s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='123@163.com' LIMIT 1   [ RunTime:0.000204s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='123@163.com' and pwd='e10adc3949ba59abbe56e057f20f883e' and status=1 LIMIT 1   [ RunTime:0.000203s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-10 13:25:20' WHERE email='123@163.com' and id='1'  [ RunTime:0.040922s ]
+
+[ 2014-02-10T13:25:55+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:25:55+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:26:23+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:26:23+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:26:25+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:26:25+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:37:12+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:37:12+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:47:26+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:47:26+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:47:32+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:47:32+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:36+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:36+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:39+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:39+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:40+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:40+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:42+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:42+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:43+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:43+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:58:44+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:58:44+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:59:04+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:59:04+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:59:05+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:59:05+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:59:05+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T13:59:07+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T13:59:07+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:21:36+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:21:36+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:21:38+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:21:38+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:21:39+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:24:18+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:24:18+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:24:23+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:24:23+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:38:52+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:38:52+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:48:43+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:49:11+08:00 ] ERR: (ThinkException) 非法操作:applydetails
+[ 2014-02-10T14:49:13+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:49:13+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:49:38+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:49:39+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:50:18+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000424s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.003368s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='122@13.cm'  LIMIT 0,1   [ RunTime:0.000314s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='31'  LIMIT 0,1   [ RunTime:0.000212s ]
+SQL: INSERT INTO `userinfo` (`email`,`pwd`,`nickname`,`isVip`,`isYear`,`isAdmin`,`joindate`,`status`,`last_date`,`last_ip`) VALUES ('122@13.cm','9e5317e838cb5bd8e98a013fffc2b30e','31',0,0,0,'2014-02-10 14:50:18',1,'2014-02-10 14:50:18','::1') [ RunTime:0.043458s ]
+
+[ 2014-02-10T14:50:18+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:50:18+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T14:50:21+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-10T14:50:21+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-10T19:30:54+08:00 ] ERR: (ThinkException) 无法加载模块:Party
+[ 2014-02-10T19:31:43+08:00 ] ERR: (ThinkException) 无法加载模块:Party
+[ 2014-02-10T19:31:48+08:00 ] ERR: (ThinkException) 无法加载模块:Party
+[ 2014-02-10T22:56:11+08:00 ] ERR: (ThinkException) 非法操作:partylog
+[ 2014-02-10T22:56:35+08:00 ] ERR: (ThinkException) 非法操作:partylog
+[ 2014-02-10T22:56:46+08:00 ] ERR: (ThinkException) 非法操作:partylog
+[ 2014-02-10T23:03:52+08:00 ] ERR: (ThinkException) 非法操作:getonepartylog
+[ 2014-02-10T23:05:16+08:00 ] ERR: (ThinkException) 非法操作:getonepartylog
+[ 2014-02-10T23:07:30+08:00 ] ERR: (ThinkException) 非法操作:getonepartylog
+[ 2014-02-10T23:08:42+08:00 ] ERR: (ThinkException) 非法操作:getonepartylog

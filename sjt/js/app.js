@@ -32,9 +32,142 @@ app.config(['$routeProvider',
                 return 'tpl/' + parms.curd + '.html';
             },
             controller: 'ballCtrl'
+        }).when('/party/:curd', {
+            templateUrl: function(parms) {
+                return 'tpl/' + parms.curd + '.html';
+            },
+            controller: 'partyCtrl'
         });
     }
 ]);
+
+//聚会管理controller
+app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
+    function($scope, $http, $location, $routeParams) {
+        var id = $routeParams.id;
+        var curd = $routeParams.curd;
+
+        var $url = "../index.php/Admin/party/add";
+
+        if (curd == 'party_list') {
+            var del = $routeParams.del;
+            if (del == 'true') {
+                var flag = window.confirm("确认删除？");
+                if (flag) {
+                    if (id = parseInt(id)) {
+                        $http.get("../index.php/Admin/party/del?id=" + id).success(function(data) {
+                            if (data.status == '-1') {
+                                alert("删除失败!");
+                            } else {
+                                alert("删除成功！");
+                            }
+                            window.location.href = "./main.php#party/party_list";
+                        });
+                    }
+                }
+            }
+
+            var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/party/ajaxGetParty?page=1";
+            $http.get($url).success(function(data) {
+                $scope.party = data.data;
+                $scope.page = data.page;
+
+                $("#page").html(data.page);
+            });
+
+        } else if (curd == "add_party") {
+
+            if (id = parseInt(id)) {
+                $url = "../index.php/Admin/party/update";
+                $http.get("../index.php/Admin/party/getOneParty?id=" + id).success(function(data) {
+                    if (data != '-1') {
+                        $scope.party = {};
+                        $scope.party.title = data[0].title;
+                        $scope.party.status = data[0].status;
+                        $scope.party.content = data[0].content;
+                        $scope.type = "确认修改";
+                    }
+
+                });
+            } else {
+
+                $scope.type = "确认添加";
+            }
+        } else if (curd == "party_logs") {
+            var del = $routeParams.del;
+            var lid=$routeParams.lid;
+            if (del == 'true') {
+                var flag = window.confirm("确认删除？");
+                if (flag) {
+                    if (lid = parseInt(lid)) {
+                        $http.get("../index.php/Admin/party/dellog?lid=" + lid).success(function(data) {
+                            if (data!= '1') {
+                                alert("删除失败!");
+                            } else {
+                                alert("删除成功！");
+                            }
+                            window.location.href = "./main.php#party/party_logs?id="+id;
+                        });
+                    }
+                }
+            }
+
+            if (id = parseInt(id)) {
+                $http.get("../index.php/Admin/party/partylog?id=" + id).success(function(data) {
+                    if (data != "-1") {
+                        $scope.logs = data.data;
+                        $scope.title = data.title[0].title;
+                        $scope.id=data.title[0].id;
+                    }
+
+                });
+            }
+        } else if (curd == "partylog_edit") {
+             var lid=$routeParams.lid;
+            if (lid = parseInt(lid)) {
+                $http.get("../index.php/Admin/party/getOnePartyLog?id=" + lid).success(function(data) {
+                    if (data != "-1") {
+                        $scope.log = data[0];
+                    }
+
+                });
+            }
+        }
+
+        $scope.edit_log = function() {
+            var $url = "../index.php/Admin/party/updatelog";
+             var lid=$routeParams.lid;
+            if (lid = parseInt(lid)){
+                $scope.log.id = lid;
+                $http.post($url, $scope.log).success(function(data) {
+                    if (data.status != '1') {
+                        alert(data.msg)
+                    } else {
+                        alert(data.msg);
+                         window.location.href = "./main.php#party/party_logs?id="+id;
+                    }
+                });
+            }
+        }
+
+        $scope.addParty = function() {
+            $location.path("/party/add_party");
+        }
+
+        $scope.add = function() {
+            $scope.party.id=id;
+            $http.post($url, $scope.party).success(function(data) {
+                if (data.status) {
+                    alert(data.msg);
+                    $location.path("/party/party_list");
+                } else {
+                    alert(data.msg);
+                }
+            });
+        }
+    }
+]);
+
 
 //球票預定管理controller
 app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
@@ -97,6 +230,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                     if (data != "-1") {
                         $scope.logs = data.data;
                         $scope.title = data.title[0].title;
+                        $scope.id = data.title[0].id;
                     }
 
                 });
@@ -112,7 +246,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
             }
         }
 
-        $scope.edit_log=function(){
+        $scope.edit_log = function() {
             var $url = "../index.php/Admin/user/update";
             $http.post($url, $scope.log).success(function(data) {
                 if (data == '0') {

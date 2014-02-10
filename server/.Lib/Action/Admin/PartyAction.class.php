@@ -1,33 +1,29 @@
 <?php
 
-class BallAction extends AdminAction{
+class PartyAction extends AdminAction{
 
 	function add(){
 		$post=$this->getInputData();
 		$title=$this->filter($post['title']);
-		$time=$this->filter($post['match_time']);
-		$op=$this->filter($post['match_op']);
-		$address=$this->filter($post['match_address']);
-		$tc=$this->filter($post['ticket_cost']);
-		$cc=$this->filter($post['car_cost']);
 		$status=$this->filter($post['status']);
+		$content=$this->filter($post['content']);
 		$msg=array();
-		if(empty($title)||empty($time)||empty($address)||empty($tc)||empty($cc)||empty($op)){
+		if(empty($title)||empty($content)){
 			$msg['status']=0;
-			$msg['msg']='请填写完整比赛信息';
+			$msg['msg']='请填写完整聚会信息';
 			echo $this->echoJsonMsg($msg);
 			exit;
 		}
-		if(!is_numeric($tc)||!is_numeric($cc)||!is_numeric($status)){
+		if(!is_numeric($status)){
 			$msg['status']=0;
 			$msg['msg']='信息不合法';
 			echo $this->echoJsonMsg($msg);
 			exit;
 		}
 
-		$data=array("title"=>$title,"match_time"=>$time,"match_op"=>$op,"match_address"=>$address,"ticket_cost"=>$tc,"car_cost"=>$cc,"status"=>$status,"date"=>date("Y-m-d H:i:s",time()));
-		$ballModel=D("Ball");
-		$result=$ballModel->addData($data);
+		$data=array("title"=>$title,"content"=>$content,"status"=>$status,"date"=>date("Y-m-d H:i:s",time()));
+		$partyModel=D("Party");
+		$result=$partyModel->addData($data);
 		if($result!==false){
 			$msg['status']=1;
 		}else{
@@ -38,28 +34,28 @@ class BallAction extends AdminAction{
 
 	}
 
-	public function getOneBall(){
+	public function getOneParty(){
 		 $id=intval($_GET['id']);
           if(!is_numeric($id)){
              echo "-1";
              exit;
           }
-         $ballModel=D("Ball");
-         $data=$ballModel->getOne(array("id"=>$id));
+         $partyModel=D("Party");
+         $data=$partyModel->getOne(array("id"=>$id));
        
          if(!empty($data)){
             echo $this->echoJsonMsg($data);
          }
 	}
 
-	public function ajaxGetBalls(){
+	public function ajaxGetParty(){
         header('Content-Type: text/html; charset=utf-8');
         import("ORG.Util.Page");
         $get=$_GET;
         $page=$get['page']?$get['page']:1;
         $state=$get['state'];
        
-        $ballModel=D("Ball");
+        $ballModel=D("Party");
         $count=$ballModel->count();
         $data=$ballModel->getPage($page,15,'','id desc');
         $pager=new Page($count,15,"setPage","changePage");
@@ -77,10 +73,12 @@ class BallAction extends AdminAction{
           if(!is_numeric($id)){
               $msg['status']=0;
               $msg['msg']="修改失敗";
+               echo $this->echoJsonMsg($msg);
+               exit;
           }
 
-        $ballModel=D("Ball");
-        $result=$ballModel->updateFiled($post,array("id"=>$id));
+        $partyModel=D("Party");
+        $result=$partyModel->updateFiled($post,array("id"=>$id));
         if($result==false){
             $msg['status']=0;
             $msg['msg']="修改失敗";
@@ -98,23 +96,23 @@ class BallAction extends AdminAction{
           if(!is_numeric($id)){
              echo "-1";
           }
-          $BallModel=D("Ball");   
-          $resulst=$BallModel->delOne(array("id"=>$id));
+          $partyModel=D("Party");   
+          $resulst=$partyModel->delOne(array("id"=>$id));
           if(!empty($resulst)){
              echo "1";
           }
     }
 
-    public function ballLog(){
+    public function partylog(){
     	$id=intval($_GET['id']);
           if(!is_numeric($id)){
              echo "-1";
              exit;
           }
-         $ballLog=D("BallLog");
-         $data=$ballLog->getAll(array("tid"=>$id));
-         $BallModel=D("Ball"); 
-         $title=$BallModel->getOne($data['tid'],array("title","id"));
+         $partyLog=D("PartyLog");
+         $data=$partyLog->getAll(array("pid"=>$id));
+         $partyModel=D("Party"); 
+         $title=$partyModel->getOne($data['tid'],array("title","id"));
          $result=array("title"=>$title,"data"=>$data);
          if(empty($data)){
          	echo "-1";
@@ -124,14 +122,14 @@ class BallAction extends AdminAction{
 
     }
 
-    public function getOneBallLog(){
+    public function getonepartylog(){
     	$id=intval($_GET['id']);
           if(!is_numeric($id)){
              echo "-1";
              exit;
           }
-         $ballLog=D("BallLog");
-         $data=$ballLog->getOne(array("id"=>$id));
+         $PartyLog=D("PartyLog");
+         $data=$PartyLog->getOne(array("id"=>$id));
          if(empty($data)){
          	echo "-1";
          }else{
@@ -139,17 +137,34 @@ class BallAction extends AdminAction{
          }
     }
 
+     public function dellog(){
+         $id=intval($_GET['lid']);
+          if(!is_numeric($id)){
+             echo "-1";
+          }
+          $PartyLog=D("PartyLog");   
+          $resulst=$PartyLog->delOne(array("id"=>$id));
+          if(!empty($resulst)){
+             echo "1";
+          }
+    }
+
     public function updatelog(){
-         $post=$this->getInputData();
+        $post=$this->getInputData();
          $msg=array();
          $id=intval($post['id']);
           if(!is_numeric($id)){
               $msg['status']=0;
               $msg['msg']="修改失敗";
           }
-
-        $balllogModel=D("BallLog");
-        $result=$balllogModel->updateFiled($post,array("id"=>$id));
+        if(!is_numeric($post['nums'])){
+              $msg['status']=0;
+              $msg['msg']="人数必须为数字";
+               echo $this->echoJsonMsg($msg);
+               exit;
+        }
+        $partylog=D("PartyLog");
+         $result=$partylog->updateFiled($post,array("id"=>$id));
         if($result==false){
             $msg['status']=0;
             $msg['msg']="修改失敗";
@@ -159,5 +174,8 @@ class BallAction extends AdminAction{
         }
       
         echo $this->echoJsonMsg($msg);
+
+
     }
+
 }

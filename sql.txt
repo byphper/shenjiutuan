@@ -1,0 +1,79 @@
+-- phpMyAdmin SQL Dump
+-- version 4.0.9
+-- http://www.phpmyadmin.net
+--
+-- 主机: 127.0.0.1
+-- 生成日期: 2014-02-10 16:52:15
+-- 服务器版本: 5.6.14
+-- PHP 版本: 5.5.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- 数据库: `sjt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `party`
+--
+
+CREATE TABLE IF NOT EXISTS `party` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(50) NOT NULL,
+  `content` text NOT NULL,
+  `status` smallint(6) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=5 ;
+
+--
+-- 转存表中的数据 `party`
+--
+
+INSERT INTO `party` (`id`, `title`, `content`, `status`, `date`) VALUES
+(1, '龙泉酒店聚会看球', '是打发士大夫啊是的', 1, '2014-02-12 00:00:00'),
+(3, '香蜜湖聚會開球', 'fafafd', 1, '2014-02-10 22:27:10'),
+(4, '布吉貴族酒吧看球活動', '喝酒把妹  打灰機哦   哈哈哈', 0, '2014-02-10 22:30:57');
+
+
+-- phpMyAdmin SQL Dump
+-- version 4.0.9
+-- http://www.phpmyadmin.net
+--
+-- 主机: 127.0.0.1
+-- 生成日期: 2014-02-10 16:53:04
+-- 服务器版本: 5.6.14
+-- PHP 版本: 5.5.6
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET time_zone = "+00:00";
+
+--
+-- 数据库: `sjt`
+--
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `party_logs`
+--
+
+CREATE TABLE IF NOT EXISTS `party_logs` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `pid` int(11) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `nickname` varchar(20) NOT NULL,
+  `nums` int(11) NOT NULL,
+  `date` datetime NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=4 ;
+
+--
+-- 转存表中的数据 `party_logs`
+--
+
+INSERT INTO `party_logs` (`id`, `pid`, `uid`, `nickname`, `nums`, `date`) VALUES
+(3, 1, 123, 'cookie', 1, '2014-02-08 00:00:00');

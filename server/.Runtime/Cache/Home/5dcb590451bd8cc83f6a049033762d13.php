@@ -45,7 +45,7 @@
 				<a href="__APP__/News/newsList">新闻公告</a>
 			</li>
 			<li class="nav_item">
-				<a href="applylist.html">报名看球</a>
+				<a href="__APP__/Ball/ballList">报名看球</a>
 			</li>
 			<li class="nav_item">
 				<a href="#">參加聚会</a>
