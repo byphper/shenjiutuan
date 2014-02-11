@@ -37,7 +37,29 @@ app.config(['$routeProvider',
                 return 'tpl/' + parms.curd + '.html';
             },
             controller: 'partyCtrl'
+        }).when('/about', {
+            templateUrl:"tpl/about.html",
+            controller: 'aboutCtrl'
         });
+    }
+]);
+
+app.controller('aboutCtrl', ['$scope', '$http', '$location', '$routeParams',
+    function($scope, $http, $location, $routeParams) {
+            $http.get("../index.php/Admin/about/get").success(function(data){
+                $("#editor").html(data.data[0].content);
+                UE.getEditor('editor');
+                 
+            });
+
+            $scope.about=function(){
+                 var c = document.getElementsByName("cnm");
+                 $http.post("../index.php/Admin/about/add",{content:$(c).val()}).success(function(data){
+                    if(data=='1'){
+                        alert("修改成功");
+                    }
+                 });
+            }
     }
 ]);
 
@@ -141,7 +163,7 @@ app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
                 $scope.log.id = lid;
                 $http.post($url, $scope.log).success(function(data) {
                     if (data.status != '1') {
-                        alert(data.msg)
+                        alert(data.msg);
                     } else {
                         alert(data.msg);
                          window.location.href = "./main.php#party/party_logs?id="+id;
@@ -225,6 +247,24 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                 $scope.type = "确认添加";
             }
         } else if (curd == "ball_deatils") {
+            var lid=$routeParams.lid;
+             var del = $routeParams.del;
+            if (del == 'true') {
+                var flag = window.confirm("确认删除？");
+                if (flag) {
+                    if (lid = parseInt(lid)) {
+                        $http.get("../index.php/Admin/ball/dellog?lid=" + lid).success(function(data) {
+                            if (data!= '1') {
+                                alert("删除失败!");
+                            } else {
+                                alert("删除成功！");
+                            }
+                            window.location.href = "./main.php#ball/ball_deatils?id="+id;
+                        });
+                    }
+                }
+            }
+
             if (id = parseInt(id)) {
                 $http.get("../index.php/Admin/ball/balllog?id=" + id).success(function(data) {
                     if (data != "-1") {
@@ -247,13 +287,18 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
         }
 
         $scope.edit_log = function() {
-            var $url = "../index.php/Admin/user/update";
+
+            var $url = "../index.php/Admin/ball/updatelog";
+           var bid=$routeParams.bid;
+            if($scope.log.style=='0'){
+                $scope.log.goadd="不跟車";
+            }
             $http.post($url, $scope.log).success(function(data) {
                 if (data == '0') {
                     alert(data.msg)
                 } else {
                     alert(data.msg);
-                    $location.path("/user/user_info");
+                   window.location.href = "./main.php#ball/ball_deatils?id="+bid;
                 }
             });
         }

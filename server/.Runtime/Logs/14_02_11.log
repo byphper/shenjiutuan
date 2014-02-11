@@ -1,0 +1,52 @@
+[ 2014-02-11T12:28:05+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:28:05+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:28:10+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:28:10+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:28:11+08:00 ] ERR: (ThinkException) 非法操作:applydetails
+[ 2014-02-11T12:28:13+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:28:28+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:28:30+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:28:32+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:10+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:13+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:15+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:16+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:19+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:38+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:38+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:29:48+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:29:48+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:30:53+08:00 ] 127.0.0.1 /shenjiutuan/index.php/User/regist
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.015625s ]
+SQL: SELECT `id` FROM `userinfo` WHERE email='by@163.com'  LIMIT 0,1   [ RunTime:0.000000s ]
+SQL: SELECT `id` FROM `userinfo` WHERE nickname='布吉-劉德華'  LIMIT 0,1   [ RunTime:0.000000s ]
+SQL: INSERT INTO `userinfo` (`email`,`pwd`,`nickname`,`isVip`,`isYear`,`isAdmin`,`joindate`,`status`,`last_date`,`last_ip`) VALUES ('by@163.com','e10adc3949ba59abbe56e057f20f883e','布吉-劉德華',0,0,0,'2014-02-11 12:30:53',1,'2014-02-11 12:30:53','127.0.0.1') [ RunTime:0.046875s ]
+
+[ 2014-02-11T12:31:00+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:31:00+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:01+08:00 ] ERR: (ThinkException) 非法操作:favicon
+[ 2014-02-11T12:31:01+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:02+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:03+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:06+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:09+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:19+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:20+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:31:42+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:29+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:37+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:42+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:51+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:57+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T12:32:59+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-11T17:37:40+08:00 ] ERR: (ThinkException) 无法加载模块:About
+[ 2014-02-11T17:37:47+08:00 ] ERR: (ThinkException) 无法加载模块:About
+[ 2014-02-11T17:38:57+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id='1'' at line 1
+ [ SQL语句 ] : UPDATE `about` SET  WHERE id='1' 
+[ 2014-02-11T17:38:59+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id='1'' at line 1
+ [ SQL语句 ] : UPDATE `about` SET  WHERE id='1' 
+[ 2014-02-11T17:39:03+08:00 ] ERR: (ThinkException) You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE id='1'' at line 1
+ [ SQL语句 ] : UPDATE `about` SET  WHERE id='1' 

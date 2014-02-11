@@ -8,18 +8,55 @@
 
  } 
 </style>
-<a href="./main.php#/ball/ball_deatils?id={{log.tid}}">返回</a>
+<a href="./main.php#/ball/ball_deatils?id={{log.tid}}" style="font-size:18px;">返回</a><br />
 <form id="usered" ng-submit="edit_log()">
   昵称:<input type="text" required class="form-control" ng-model='log.nickname' disabled="disabled">
-  人数:<input type="text" required class="form-control" ng-model="log.nums">
+  看球人数:<select class="form-control" style="color:red"  ng-model='log.watch_nums'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+      </select>
+  跟車人数:<select class="form-control" style="color:red"  ng-model='log.car_nums'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+      </select>
+  球票数:<select class="form-control" style="color:red"  ng-model='log.ticket_nums'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+      </select>
   是否跟车:<select class="form-control" style="color:red"  ng-model='log.style'>
           <option value='0' checked='checked'>否</option>
           <option value='1'>是</option>
       </select>
-  上车地点::<select class="form-control" style="color:red" ng-model='log.goadd'>
+      <span ng-show="log.style">
+  上车地点:<select class="form-control" style="color:red" ng-model='log.goadd'>
           <option value='布吉联检站'>布吉联检站</option>
           <option value='机场东'>机场东</option>
       </select>
+    </span>
   是否付款<select class="form-control" style="color:red"  ng-model='log.isPay'>
           <option value='0' checked='checked'>否</option>
           <option value='1'>是</option>

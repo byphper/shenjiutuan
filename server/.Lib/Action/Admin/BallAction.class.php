@@ -160,4 +160,20 @@ class BallAction extends AdminAction{
       
         echo $this->echoJsonMsg($msg);
     }
+
+
+     public function dellog(){
+         $id=intval($_GET['lid']);
+          if(!is_numeric($id)){
+             echo "-1";
+          }
+          $BallLog=D("BallLog");   
+          $resulst=$BallLog->delOne(array("id"=>$id));
+          if(!empty($resulst)){
+             echo "1";
+          }
+    }
+
+
+  
 }
