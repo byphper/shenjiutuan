@@ -54,7 +54,7 @@ abstract class BaseModel extends Model{
 		 	$whereString=substr($whereString, 0,strripos($whereString,"and"));
 		 	return $whereString;
 		 }
-		 return false;
+		 return $where;
 	}
 
 	public function addData($data=array()){

@@ -175,8 +175,8 @@
 					<br/>
 				</div>
 				<div>
-					<input id="lrem" type="checkbox" checked="true" name="lrem" value="remerber">
-					<span style="">记住密码</span>
+					
+					<a href="#">记住密码</a>
 					<br/>
 					<br/>
 				</div>

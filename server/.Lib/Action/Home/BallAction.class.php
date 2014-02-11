@@ -10,24 +10,23 @@ class BallAction extends BaseAction {
        
         $ballModel=D("Ball");
         $count=$ballModel->count();
-        $data=$ballModel->getPage($page,10,'','id desc',array("id","title","date"));
+        $data=$ballModel->getPage($page,10,"status!=0",'id desc',array("id","status","title","date"));
         $pager=new Page($count,10,"setPage","changePage"); 
         $this->assign('data',$data);
-
+       
         $this->display();      
 
     }
 
-    public function getOneNews(){
+    public function applydetails(){
          $id=intval($_GET['id']);
           if(!is_numeric($id)){
              exit;
           }
-         $newsModel=D("News");
-         $data=$newsModel->getOne(array("id"=>$id));
-         $newsModel->updateFiled(array("views"=>$data[0]['views']+1),array("id"=>$id));
+         $Ball=D("Ball");
+         $data=$Ball->getOne(array("id"=>$id));
         $this->assign('data',$data);
-
+       
         $this->display();  
 
        

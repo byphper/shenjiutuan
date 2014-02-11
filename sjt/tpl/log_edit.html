@@ -23,18 +23,7 @@
           <option value='9'>9</option>
           <option value='10'>10</option>
       </select>
-  跟車人数:<select class="form-control" style="color:red"  ng-model='log.car_nums'>
-          <option value='1'>1</option>
-          <option value='2'>2</option>
-          <option value='3'>3</option>
-          <option value='4'>4</option>
-          <option value='5'>5</option>
-          <option value='6'>6</option>
-          <option value='7'>7</option>
-          <option value='8'>8</option>
-          <option value='9'>9</option>
-          <option value='10'>10</option>
-      </select>
+
   球票数:<select class="form-control" style="color:red"  ng-model='log.ticket_nums'>
           <option value='1'>1</option>
           <option value='2'>2</option>
@@ -51,6 +40,20 @@
           <option value='0' checked='checked'>否</option>
           <option value='1'>是</option>
       </select>
+        <span ng-show="log.style">
+  跟車人数:<select class="form-control" style="color:red"  ng-model='log.car_nums'>
+          <option value='1'>1</option>
+          <option value='2'>2</option>
+          <option value='3'>3</option>
+          <option value='4'>4</option>
+          <option value='5'>5</option>
+          <option value='6'>6</option>
+          <option value='7'>7</option>
+          <option value='8'>8</option>
+          <option value='9'>9</option>
+          <option value='10'>10</option>
+      </select>
+    </span>
       <span ng-show="log.style">
   上车地点:<select class="form-control" style="color:red" ng-model='log.goadd'>
           <option value='布吉联检站'>布吉联检站</option>

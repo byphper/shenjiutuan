@@ -4,97 +4,26 @@
 		<div id="news">
 			<div id="newsleft" class="newslist">
 				<div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD"><span style="color:red">正在接受报名</span></div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
-					<div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="applydetails.html">11月11日亚冠决赛广州恒大vs首尔fc</a>
-							</li>
-						</div>
-						<div class="rightD">已结束</div>
-						<div style="clear:left"></div>
-					</div>
 					
+					<foreach name="data" item="vo">
+						<div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="__APP__/Ball/applydetails?id={$vo.id}">{$vo.title}</a>
+							</li>
+						</div>
+						<div class="rightD">
+						<span style="color:red">
+							<if condition="$vo.status eq 2">已结束
+							<elseif condition="$vo.status eq 1"/>正接受報名
+							<else /> 
+								xx
+							</if>
+
+						</span></div>
+						<div style="clear:left"></div>
+					</div>
+					</foreach>
 					
 				</div>
 			</div>

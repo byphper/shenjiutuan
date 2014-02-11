@@ -292,6 +292,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
            var bid=$routeParams.bid;
             if($scope.log.style=='0'){
                 $scope.log.goadd="不跟車";
+                $scope.log.car_nums=0;
             }
             $http.post($url, $scope.log).success(function(data) {
                 if (data == '0') {

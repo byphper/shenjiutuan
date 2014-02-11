@@ -66,36 +66,127 @@
                $('#demo1').slideBox();
             });
     </script>
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/applylist.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/applydetails.css" />
 	<div class="center">
 		<div id="news">
-			<div id="newsleft" class="newslist">
-				<div>
+			<div id="news_nav">
+				<a href="__APP__/Ball/ballList">报名看球</a>
+				&nbsp;>&nbsp;
+				<span style="font-size:12px;color:#c03e3e"><?php echo ($data[0]["title"]); ?></span>
+			</div>
+			<div id="news_con">
+				<div id="team">广州恒大&emsp;VS&emsp;<?php echo ($data[0]["match_op"]); ?></div>
+				<div class="intro">比赛时间:<?php echo ($data[0]["match_time"]); ?></div>
+				<div class="intro">比赛地点:<?php echo ($data[0]["match_address"]); ?></div>
+				<div class="intro">门票:RMB<?php echo ($data[0]["ticket_cost"]); ?>&emsp;车费:RMB1<?php echo ($data[0]["car_cost"]); ?>(来回,可选择不跟车)</div>
+				<div class="intro">看台:6区</div>
+				<div class="intro">
 					
-					<?php if(is_array($data)): foreach($data as $key=>$vo): ?><div class="newsitem">
-						<div class="leftA">
-							<li>
-								<a href="__APP__/Ball/applydetails?id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
-							</li>
-						</div>
-						<div class="rightD">
-						<span style="color:red">
-							<?php if($vo["status"] == 2): ?>已结束
-							<?php elseif($vo["status"] == 1): ?>正接受報名
-							<?php else: ?> 
-								xx<?php endif; ?>
-
-						</span></div>
-						<div style="clear:left"></div>
-					</div><?php endforeach; endif; ?>
-					
+					<?php
+ if($data[0]['status']==1){ echo "<button id='applyball' type='button' class='btn btn-danger'>我要報名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; } ?>
 				</div>
 			</div>
-			<div id="newsright" class="newslist">
-			</div>
-			<div style="clear:left"></div>
 		</div>
 	</div>
+
+
+	<div id="applyform" style="display:none;">
+		<div id="ball_head">报名看球</div>
+		<ul id="notice">
+			<li>1.报名成功后请把球票和跟车费用转到支付宝xxxo账号下</li>
+			<li>2.如果报名后，迟迟不付款将取消名额</li>
+			<li>3.支付成功请把订单截图发送给福田-菜牛</li>
+		</ul>
+		<hr style="border:#ecd9d9 1px solid">
+		<form id="formdetiles" action="#" method="post">
+			<div>福田-菜牛</div>
+			<div>
+				<span>看球人数：&emsp;</span>
+				<select style="width:100px">
+		          <option value='1'>1</option>
+		          <option value='2'>2</option>
+		          <option value='3'>3</option>
+		          <option value='4'>4</option>
+		          <option value='5'>5</option>
+		          <option value='6'>6</option>
+		          <option value='7'>7</option>
+		          <option value='8'>8</option>
+		          <option value='9'>9</option>
+		          <option value='10'>10</option>
+		      </select>
+			</div>
+			<div>
+				<span>球票数量：&emsp;</span>
+				<select style="width:100px">
+		          <option value='1'>1</option>
+		          <option value='2'>2</option>
+		          <option value='3'>3</option>
+		          <option value='4'>4</option>
+		          <option value='5'>5</option>
+		          <option value='6'>6</option>
+		          <option value='7'>7</option>
+		          <option value='8'>8</option>
+		          <option value='9'>9</option>
+		          <option value='10'>10</option>
+		      </select>
+			</div>
+			<div>
+				<span>是否跟车：&emsp;</span>
+				<select id="isCar" style="width:100px">
+					<option value='1'>是</option>
+		          <option value='0'>否</option>
+		          
+		      </select>
+			</div>
+			<div id="carNums" >
+				<span>跟车人数：&emsp;</span>
+				<select style="width:100px">
+		          <option value='1'>1</option>
+		          <option value='2'>2</option>
+		          <option value='3'>3</option>
+		          <option value='4'>4</option>
+		          <option value='5'>5</option>
+		          <option value='6'>6</option>
+		          <option value='7'>7</option>
+		          <option value='8'>8</option>
+		          <option value='9'>9</option>
+		          <option value='10'>10</option>
+		      </select>
+			</div>
+			<div id="carAdd">
+				<span>请选择上车地点：</span>
+				<select>
+					<option>布吉</option>
+					<option>机场东</option>
+					<option>直升机机场</option>
+					<option>香蜜湖</option>
+					<option>龙华</option>
+				</select>
+			</div>
+			<div>
+				<input type="submit" class="btn btn-info" value="提交" />
+			</div>
+		</form>
+
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			
+			$("#applyball").bind('click', function(event) {
+				showLyarUi("applyform",480,420);
+			});
+			$("#isCar").bind('change', function(event) {
+				if($(this).val()==1){
+					
+					$("#carNums").show();
+					$("#carAdd").show();
+				}else{
+					$("#carNums").hide();
+					$("#carAdd").hide();
+				}
+			});;
+		})
+	</script>
 <div id="foot">
 		<div id="foot_center">
 			友情链接

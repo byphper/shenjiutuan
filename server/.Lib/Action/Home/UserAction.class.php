@@ -55,14 +55,7 @@ class UserAction extends BaseAction {
 		}else{
 			$msg['status']=1;
 		}
-		$lrem=$_POST['lrem'];
-		if($lrem!='false'){
-			setcookie('email',$user,time()+3600*24*360);
-			setcookie('pwd',$pwd,time()+3600*24*360);
-		}else{
-			setcookie('email','',time()-3600);
-			setcookie('pwd','',time()-3600);
-		}
+		
 		$userModel->updateFiled(array("last_ip"=>$this->get_ip(),"last_date"=>date("Y-m-d H:i:s"),time()),array("email"=>$result['email'],"id"=>$result["id"]));
 		if(!isset($_SESSION['user'])&&empty($_SESSION['user'])){
 			$this->setSession('user',$result);
