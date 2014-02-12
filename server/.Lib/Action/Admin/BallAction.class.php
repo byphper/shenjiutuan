@@ -39,7 +39,7 @@ class BallAction extends AdminAction{
 	}
 
 	public function getOneBall(){
-		 $id=intval($_GET['id']);
+		 $id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
              exit;
@@ -73,7 +73,7 @@ class BallAction extends AdminAction{
     public function update(){
          $post=$this->getInputData();
          $msg=array();
-         $id=intval($post['id']);
+         $id=$post['id'];
           if(!is_numeric($id)){
               $msg['status']=0;
               $msg['msg']="修改失敗";
@@ -94,7 +94,7 @@ class BallAction extends AdminAction{
     }
 
     public function del(){
-    	 $id=intval($_GET['id']);
+    	 $id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
           }
@@ -106,7 +106,7 @@ class BallAction extends AdminAction{
     }
 
     public function ballLog(){
-    	$id=intval($_GET['id']);
+    	$id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
              exit;
@@ -125,7 +125,7 @@ class BallAction extends AdminAction{
     }
 
     public function getOneBallLog(){
-    	$id=intval($_GET['id']);
+    	$id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
              exit;
@@ -142,7 +142,7 @@ class BallAction extends AdminAction{
     public function updatelog(){
          $post=$this->getInputData();
          $msg=array();
-         $id=intval($post['id']);
+         $id=$post['id'];
           if(!is_numeric($id)){
               $msg['status']=0;
               $msg['msg']="修改失敗";
@@ -163,7 +163,7 @@ class BallAction extends AdminAction{
 
 
      public function dellog(){
-         $id=intval($_GET['lid']);
+         $id=$_GET['lid'];
           if(!is_numeric($id)){
              echo "-1";
           }

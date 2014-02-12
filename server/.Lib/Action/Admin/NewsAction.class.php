@@ -43,7 +43,7 @@ class NewsAction extends BaseAction {
     }
 
     public function getOneNews(){
-         $id=intval($_GET['id']);
+         $id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
              exit;
@@ -58,7 +58,7 @@ class NewsAction extends BaseAction {
 
 
     public function delOneNews(){
-          $id=intval($_GET['id']);
+          $id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
           }
@@ -72,7 +72,7 @@ class NewsAction extends BaseAction {
     public function update(){
          $post=$this->getInputData();
          $msg=array();
-         $id=intval($post['id']);
+         $id=$post['id'];
           if(!is_numeric($id)){
               $msg['status']=0;
               $msg['msg']="修改失敗";

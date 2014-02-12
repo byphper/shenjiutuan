@@ -78,7 +78,7 @@
 				<div id="team">广州恒大&emsp;VS&emsp;<?php echo ($data[0]["match_op"]); ?></div>
 				<div class="intro">比赛时间:<?php echo ($data[0]["match_time"]); ?></div>
 				<div class="intro">比赛地点:<?php echo ($data[0]["match_address"]); ?></div>
-				<div class="intro">门票:RMB<?php echo ($data[0]["ticket_cost"]); ?>&emsp;车费:RMB1<?php echo ($data[0]["car_cost"]); ?>(来回,可选择不跟车)</div>
+				<div class="intro">门票:RMB<?php echo ($data[0]["ticket_cost"]); ?>&emsp;车费:RMB<?php echo ($data[0]["car_cost"]); ?>(来回,可选择不跟车)</div>
 				<div class="intro">看台:6区</div>
 				<div class="intro">
 					
@@ -102,7 +102,7 @@
 			<div>福田-菜牛</div>
 			<div>
 				<span>看球人数：&emsp;</span>
-				<select style="width:100px">
+				<select name="watch_nums" style="width:100px">
 		          <option value='1'>1</option>
 		          <option value='2'>2</option>
 		          <option value='3'>3</option>
@@ -117,7 +117,7 @@
 			</div>
 			<div>
 				<span>球票数量：&emsp;</span>
-				<select style="width:100px">
+				<select name="ticket_nums" style="width:100px">
 		          <option value='1'>1</option>
 		          <option value='2'>2</option>
 		          <option value='3'>3</option>
@@ -132,7 +132,7 @@
 			</div>
 			<div>
 				<span>是否跟车：&emsp;</span>
-				<select id="isCar" style="width:100px">
+				<select name="style" id="isCar" style="width:100px">
 					<option value='1'>是</option>
 		          <option value='0'>否</option>
 		          
@@ -140,7 +140,7 @@
 			</div>
 			<div id="carNums" >
 				<span>跟车人数：&emsp;</span>
-				<select style="width:100px">
+				<select name="car_nums" style="width:100px">
 		          <option value='1'>1</option>
 		          <option value='2'>2</option>
 		          <option value='3'>3</option>
@@ -155,12 +155,11 @@
 			</div>
 			<div id="carAdd">
 				<span>请选择上车地点：</span>
-				<select>
-					<option>布吉</option>
-					<option>机场东</option>
-					<option>直升机机场</option>
-					<option>香蜜湖</option>
-					<option>龙华</option>
+				<select name="goadd">
+					<option value="布吉">布吉</option>
+					<option value="机场东">机场东</option>
+					<option value="直升机机场">直升机机场</option>
+					<option value="香蜜湖">香蜜湖</option>
 				</select>
 			</div>
 			<div>
@@ -173,8 +172,16 @@
 		$(function(){
 			
 			$("#applyball").bind('click', function(event) {
-				showLyarUi("applyform",480,420);
+				//showLyarUi("applyform",480,420);
+				$.getJSON('__APP__/Ball/applycheck?id=<?php echo ($data[0]["id"]); ?>', function(data) {
+					if(data.status==1){
+						showLyarUi("applyform",480,420);
+					}else{
+						alert(data.msg);
+					}
+				});
 			});
+
 			$("#isCar").bind('change', function(event) {
 				if($(this).val()==1){
 					

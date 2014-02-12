@@ -19,10 +19,12 @@ class NewsAction extends BaseAction {
     }
 
     public function getOneNews(){
-         $id=intval($_GET['id']);
-          if(!is_numeric($id)){
+         $id=$_GET['id'];
+         if(!is_numeric($id)){
+             $this->alert("../index.php");
              exit;
           }
+          
          $newsModel=D("News");
          $data=$newsModel->getOne(array("id"=>$id));
          $newsModel->updateFiled(array("views"=>$data[0]['views']+1),array("id"=>$id));

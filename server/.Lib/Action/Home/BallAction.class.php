@@ -19,7 +19,7 @@ class BallAction extends BaseAction {
     }
 
     public function applydetails(){
-         $id=intval($_GET['id']);
+         $id=$_GET['id'];
           if(!is_numeric($id)){
              exit;
           }
@@ -27,12 +27,50 @@ class BallAction extends BaseAction {
          $data=$Ball->getOne(array("id"=>$id));
         $this->assign('data',$data);
        
-        $this->display();  
-
-       
+        $this->display();   
     }
 
 
+    public function applycheck(){
+        $msg=array();
+        if(!isset($_SESSION['user'])||empty($_SESSION['user'])){
+            $msg['status']=0;
+            $msg['msg']="您还没有登陆";
+            echo $this->echoJsonMsg($msg);
+            exit;
+        }
+        
+        $id=$_GET['id'];
+        if(!is_numeric($id)){
+             $msg['status']=0;
+             $msg['msg']="信息错误";
+              echo $this->echoJsonMsg($msg);
+             exit;
+        }
+        $ballModel=D("Ball");
+        $ball=$ballModel->getOne(array("id"=>$id));
+        if($ball[0]['status']!=1){
+             $msg['status']=0;
+             $msg['msg']="信息错误";
+             echo $this->echoJsonMsg($msg);
+             exit;
+        }
+        $uid=$_SESSION['user']['id'];
+        $logModel=D("BallLog");
+        $log=$logModel->getOne(array("tid"=>$id,"uid"=>$uid));
+        
+        if(!empty($log)){
+             $msg['status']=0;
+             $msg['msg']="您已经报名，请勿重复报名！";
+        }else{
+             $msg['status']=1;
+        }
+         echo $this->echoJsonMsg($msg);
+    }
+
+    public function addBallLog(){
+
+    }
    
 
 }
