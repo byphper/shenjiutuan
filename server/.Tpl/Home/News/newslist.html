@@ -2,8 +2,10 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/news.css" />
 	<div class="center">
 		<div id="news">
+			<div><img src="__PUBLIC__/img/news.png" width="25" height="25" />
+						&nbsp;<span id="ball_title">最新新闻公告</span></div>
 			<div id="newsleft" class="newslist">
-				<div>
+				<div style="min-height:500px;">
 		
 					<foreach name="data" item="vo">
 
@@ -18,10 +20,9 @@
 					</div>
 
 					</foreach>
-					
-					
-					
-					
+				</div>
+				<div>
+					{$pager}
 				</div>
 			</div>
 			<div id="newsright" class="newslist">

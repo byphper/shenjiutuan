@@ -81,10 +81,15 @@ class BallAction extends AdminAction{
 
         $ballModel=D("Ball");
         $result=$ballModel->updateFiled($post,array("id"=>$id));
+
         if($result==false){
             $msg['status']=0;
             $msg['msg']="修改失敗";
         }else{
+            if($post['status']==2){
+              $log=D("BallLog");
+              $log->updateFiled(array("status"=>0),array("tid"=>$id,"status"=>1));
+            }
             $msg['status']=1;
             $msg['msg']="修改成功";
         }
@@ -112,7 +117,7 @@ class BallAction extends AdminAction{
              exit;
           }
          $ballLog=D("BallLog");
-         $data=$ballLog->getAll(array("tid"=>$id));
+         $data=$ballLog->getAll(array("tid"=>$id,"status"=>1));
          $BallModel=D("Ball"); 
          $title=$BallModel->getOne($data['tid'],array("title","id"));
          $result=array("title"=>$title,"data"=>$data);

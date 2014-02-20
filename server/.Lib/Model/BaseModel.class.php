@@ -63,4 +63,13 @@ abstract class BaseModel extends Model{
 		}
 	}
 
+	public function customCount($where){
+		$result=$this->query("select count(id) as nums from __TABLE__ where ".$where);
+	
+		if(!empty($result)){
+			return $result[0]["nums"];
+		}
+		return 0;
+	}
+
 }

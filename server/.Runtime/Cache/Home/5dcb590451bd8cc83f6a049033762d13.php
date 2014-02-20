@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>深九团官网</title>
-	 <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+	 
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/main.css" />
 	<link href="__PUBLIC__/css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
 			<div id="login_info">
 				<span>
 					<?php
- if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href=''>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
+ if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
 							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
@@ -39,7 +39,10 @@
 		</div>
 		<div id="con_nav">
 			<li class="nav_item" style="margin-left:30px">
-				<a href="__APP__">首頁</a>
+				<a href="__APP__">首页</a>
+			</li>
+			<li class="nav_item">
+				<a href="__APP__/Index/about">关于深九团</a>
 			</li>
 			<li class="nav_item">
 				<a href="__APP__/News/newsList">新闻公告</a>
@@ -48,15 +51,13 @@
 				<a href="__APP__/Ball/ballList">报名看球</a>
 			</li>
 			<li class="nav_item">
-				<a href="#">參加聚会</a>
+				<a href="__APP__/Party/partyList">參加聚会</a>
 			</li>
 			<li class="nav_item">
 				<a href="#">组织踢球</a>
 			</li>
 			
-			<li class="nav_item">
-				<a href="#">关于深九团</a>
-			</li>
+			
 
 		</div>
 	</div>
@@ -69,8 +70,10 @@
 <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/news.css" />
 	<div class="center">
 		<div id="news">
+			<div><img src="__PUBLIC__/img/news.png" width="25" height="25" />
+						&nbsp;<span id="ball_title">最新新闻公告</span></div>
 			<div id="newsleft" class="newslist">
-				<div>
+				<div style="min-height:500px;">
 		
 					<?php if(is_array($data)): foreach($data as $key=>$vo): ?><div class="newsitem">
 						<div class="leftA">
@@ -81,10 +84,9 @@
 						<div class="rightD"> <?php echo (substr($vo["date"],0,11)); ?></div>
 						<div style="clear:left"></div>
 					</div><?php endforeach; endif; ?>
-					
-					
-					
-					
+				</div>
+				<div>
+					<?php echo ($pager); ?>
 				</div>
 			</div>
 			<div id="newsright" class="newslist">

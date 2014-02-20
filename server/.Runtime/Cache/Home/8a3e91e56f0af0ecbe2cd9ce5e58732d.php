@@ -18,7 +18,7 @@
 			<div id="login_info">
 				<span>
 					<?php
- if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
+ if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/deatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
 							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
@@ -39,10 +39,7 @@
 		</div>
 		<div id="con_nav">
 			<li class="nav_item" style="margin-left:30px">
-				<a href="__APP__">首页</a>
-			</li>
-			<li class="nav_item">
-				<a href="__APP__/Index/about">关于深九团</a>
+				<a href="__APP__">首頁</a>
 			</li>
 			<li class="nav_item">
 				<a href="__APP__/News/newsList">新闻公告</a>
@@ -51,13 +48,15 @@
 				<a href="__APP__/Ball/ballList">报名看球</a>
 			</li>
 			<li class="nav_item">
-				<a href="__APP__/Party/partyList">參加聚会</a>
+				<a href="#">參加聚会</a>
 			</li>
 			<li class="nav_item">
 				<a href="#">组织踢球</a>
 			</li>
 			
-			
+			<li class="nav_item">
+				<a href="__APP__/Index/about">关于深九团</a>
+			</li>
 
 		</div>
 	</div>
@@ -67,32 +66,22 @@
                $('#demo1').slideBox();
             });
     </script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/userdetails.css" />
 	<div class="center">
-		<div id="con_intr"></div>
-		<div id="con_img">
-			<div id="demo1" class="slideBox">
-				<ul class="items">
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/1.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="现场助威">
-							<img src="__PUBLIC__/upload/2.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/3.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/4.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/5.jpg" width="960" height="500"></a>
-					</li>
-				</ul>
+		<div id="warp">
+			<div>
+				<img src="__PUBLIC__/img/person.png" width="25" height="30" />
+						&nbsp;<span id="person_title">个人中心</span>
+			</div>
+			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9">
+				<div id="left">
+					<li><a href="">看球记录</a></li>
+					<li><a href="">聚会记录</a></li>
+					<li><a href="">修改密码</a></li>
+				</div>
+				<div id="right">
+
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -314,3 +303,9 @@
 	</script>
 </body>
 </html>
+<script>
+    var showLogin=<?=$lui?>;
+    if(showLogin==true){
+    	showLyarUi("login_ui",280,260);
+    }
+</script>

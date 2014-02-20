@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>深九团官网</title>
-	 <link rel="Shortcut Icon" href="favicon.ico" type="image/x-icon" />
+	 
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css" />
 	<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/main.css" />
 	<link href="__PUBLIC__/css/jquery.slideBox.css" rel="stylesheet" type="text/css" />
@@ -18,7 +18,7 @@
 			<div id="login_info">
 				<span>
 					<?php
- if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href=''>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
+ if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
 							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
@@ -48,14 +48,14 @@
 				<a href="__APP__/Ball/ballList">报名看球</a>
 			</li>
 			<li class="nav_item">
-				<a href="#">參加聚会</a>
+				<a href="__APP__/Party/partyList">參加聚会</a>
 			</li>
 			<li class="nav_item">
 				<a href="#">组织踢球</a>
 			</li>
 			
 			<li class="nav_item">
-				<a href="#">关于深九团</a>
+				<a href="__APP__/Index/about">关于深九团</a>
 			</li>
 
 		</div>
@@ -83,7 +83,7 @@
 				<div class="intro">
 					
 					<?php
- if($data[0]['status']==1){ echo "<button id='applyball' type='button' class='btn btn-danger'>我要報名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; } ?>
+ if($data[0]['status']==1){ echo "<button id='applyball' type='button' class='btn btn-danger'>我要報名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; }else{ echo "<span style='color:gray;font-size:18px;'>未开放</span>"; } ?>
 				</div>
 			</div>
 		</div>
@@ -98,8 +98,10 @@
 			<li>3.支付成功请把订单截图发送给福田-菜牛</li>
 		</ul>
 		<hr style="border:#ecd9d9 1px solid">
-		<form id="formdetiles" action="#" method="post">
-			<div>福田-菜牛</div>
+		<form id="formdetiles" action="__APP__/Ball/addBallLog" method="post">
+			<div style="color:red"><?php echo ($_SESSION['user']['nickname']); ?></div>
+			<input type="hidden" value="<?php echo ($data[0]["id"]); ?>" name="tid" />
+			<input type="hidden" value="<?php echo ($data[0]["title"]); ?>" name="title" />
 			<div>
 				<span>看球人数：&emsp;</span>
 				<select name="watch_nums" style="width:100px">
@@ -172,7 +174,7 @@
 		$(function(){
 			
 			$("#applyball").bind('click', function(event) {
-				//showLyarUi("applyform",480,420);
+				
 				$.getJSON('__APP__/Ball/applycheck?id=<?php echo ($data[0]["id"]); ?>', function(data) {
 					if(data.status==1){
 						showLyarUi("applyform",480,420);

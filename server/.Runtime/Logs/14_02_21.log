@@ -1,0 +1,42 @@
+[ 2014-02-21T00:02:38+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:02:48+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:02:50+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:02:51+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:02:52+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:04:08+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:04:09+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:04:11+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:04:19+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:06:12+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:09:32+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:09:44+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:12:47+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:12:52+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:12:53+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:12:53+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:13:17+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:13:26+08:00 ] 0.0.0.0 /shenjiutuan/index.php/User/login
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000831s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `userinfo` [ RunTime:0.002869s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT `id` FROM `userinfo` WHERE email='yongge@163.com' LIMIT 1   [ RunTime:0.000219s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\develop_tools\xampp\htdocs\shenjiutuan\server\ThinkPHP\Lib\Core\Db.class.php 第 571 行.
+SQL: SELECT * FROM `userinfo` WHERE email='yongge@163.com' and pwd='c33367701511b4f6020ec61ded352059' and status=1 LIMIT 1   [ RunTime:0.000213s ]
+SQL: UPDATE `userinfo` SET `last_ip`='::1',`last_date`='2014-02-21 00:13:26' WHERE email='yongge@163.com' and id='1'  [ RunTime:0.074832s ]
+
+[ 2014-02-21T00:13:28+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:13:29+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:13:41+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:13:52+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:02+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:04+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:07+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:14+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:16+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:30+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:31+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:32+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-21T00:14:32+08:00 ] ERR: (ThinkException) 非法操作:undefined

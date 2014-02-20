@@ -1,23 +1,23 @@
 <include file="./server/.Tpl/public/head.html" />
-<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/applylist.css" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/partylist.css" />
 	<div class="center">
 		<div id="news">
 
 			<div id="newsleft" class="newslist">
 				<div style="min-height:500px;">
-					<div><img src="__PUBLIC__/img/ball.png" width="25" height="25" />
-						&nbsp;<span id="ball_title">最新看球资讯</span></div>
+					<div><img src="__PUBLIC__/img/party.png" width="25" height="25" />
+						&nbsp;<span id="ball_title">最新聚会信息</span></div>
 					<foreach name="data" item="vo">
 						<div class="newsitem">
 						<div class="leftA">
 							<li>
-								<a href="__APP__/Ball/applydetails?id={$vo.id}">{$vo.title}</a>
+								<a href="__APP__/Party/partydeatils?id={$vo.id}">{$vo.title}</a>
 							</li>
 						</div>
 						<div class="rightD">
 						<span style="color:red">
 							<if condition="$vo.status eq 2">已结束
-							<elseif condition="$vo.status eq 1"/>正接受报名
+							<elseif condition="$vo.status eq 1"/>正接受報名
 							<else /> 
 								xx
 							</if>

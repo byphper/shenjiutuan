@@ -1,4 +1,5 @@
-<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<?php if (!defined('THINK_PATH')) exit();?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8">
@@ -68,35 +69,19 @@
             });
     </script>
 	<div class="center">
-		<div id="con_intr"></div>
-		<div id="con_img">
-			<div id="demo1" class="slideBox">
-				<ul class="items">
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/1.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="现场助威">
-							<img src="__PUBLIC__/upload/2.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/3.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/4.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/5.jpg" width="960" height="500"></a>
-					</li>
-				</ul>
+		<div id="news">
+			
+			<div id="news_con">
+ 				
+ 				<div style="padding:10px;margin-top:10px;padding-left:50px;padding-right:50px;">
+ 						<?php echo ($data[0]['content']); ?>
+ 				</div>
+
 			</div>
 		</div>
 	</div>
-<div id="foot">
+
+	<div id="foot">
 		<div id="foot_center">
 			友情链接
 			<div>

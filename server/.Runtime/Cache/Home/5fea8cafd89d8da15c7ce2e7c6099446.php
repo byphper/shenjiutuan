@@ -67,35 +67,64 @@
                $('#demo1').slideBox();
             });
     </script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/partydeatils.css" />
 	<div class="center">
-		<div id="con_intr"></div>
-		<div id="con_img">
-			<div id="demo1" class="slideBox">
-				<ul class="items">
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/1.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="现场助威">
-							<img src="__PUBLIC__/upload/2.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/3.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/4.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/5.jpg" width="960" height="500"></a>
-					</li>
-				</ul>
+		<div id="news">
+			<div id="news_nav">
+				<a href="__APP__/Party/partyList">参加聚会</a>
+				&nbsp;>&nbsp;
+				<span style="font-size:12px;color:#c03e3e"><?php echo ($data[0]["title"]); ?></span>
+			</div>
+			<div id="news_con">
+				<div id="ptitle"><?php echo ($data[0]["title"]); ?></div>
+				<div style="text-align:center;margin-top:10px;"><?php echo ($data[0]["date"]); ?></div>
+				<div id="con">
+					<?php echo ($data[0]["content"]); ?>
+				</div>
+				<div style="text-align:center;margin-top:10px;">
+					
+					<?php
+ if($data[0]['status']==1){ echo "<button id='applyparty' type='button' class='btn btn-info'>我要報名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; }else{ echo "<span style='color:gray;font-size:18px;'>未开放</span>"; } ?>
+				</div>
 			</div>
 		</div>
 	</div>
+	<div id="applyform" style="display:none">
+		<form id="formdetiles" action="__APP__/party/addpartylog" method="post">
+		<div id="pformtitle">參加聚会</div>
+		<input type="hidden" value="<?php echo ($data[0]["id"]); ?>" name="pid" />
+		<input type="hidden" value="<?php echo ($data[0]["title"]); ?>" name="title" />
+		<div id="partyn">
+			请输入参加人数：<select name="party_nums" style="width:100px">
+		          <option value='1'>1</option>
+		          <option value='2'>2</option>
+		          <option value='3'>3</option>
+		          <option value='4'>4</option>
+		          <option value='5'>5</option>
+		          <option value='6'>6</option>
+		          <option value='7'>7</option>
+		          <option value='8'>8</option>
+		          <option value='9'>9</option>
+		          <option value='10'>10</option>
+		      </select>
+		</div>
+		<div style="width:280px;text-align:center;margin-top:13px"><input type="submit" class="btn btn-info btn-sm" value="提交" /></div>
+	 </form>
+	</div>
+	<script>
+		$(function(){
+
+			$("#applyparty").bind('click', function(event) {
+				$.getJSON('__APP__/Party/applycheck?id=<?php echo ($data[0]["id"]); ?>', function(data) {
+					if(data.status==1){
+						showLyarUi("applyform",280,120);
+					}else{
+						alert(data.msg);
+					}
+				});
+			});
+		})
+	</script>
 <div id="foot">
 		<div id="foot_center">
 			友情链接

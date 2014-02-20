@@ -67,32 +67,38 @@
                $('#demo1').slideBox();
             });
     </script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/userdetails.css" />
 	<div class="center">
-		<div id="con_intr"></div>
-		<div id="con_img">
-			<div id="demo1" class="slideBox">
-				<ul class="items">
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/1.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="现场助威">
-							<img src="__PUBLIC__/upload/2.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/3.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/4.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/5.jpg" width="960" height="500"></a>
-					</li>
-				</ul>
+		<div id="warp">
+			<div>
+				<img src="__PUBLIC__/img/person.png" width="25" height="30" />
+						&nbsp;<span id="person_title">个人中心</span>
+			</div>
+			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9">
+				<div id="left">
+					<li><a href="__APP__/User/balldeatils">看球记录</a></li>
+					<li><a href="__APP__/User/partydeatils"  style="color: #c03e3e;;font-weight:bold;font-size:14px;">聚会记录</a></li>
+					<li><a href="__APP__/User/changePwd">修改密码</a></li>
+				</div>
+				<div id="right">
+					<div style="min-height:190px;">
+						
+						<?php if(is_array($data)): foreach($data as $key=>$vo): ?><div class="left">
+								<?php echo ($vo["title"]); ?>
+							</div>
+							<div class="right">
+								<?php if($vo["status"] == 2): ?>已结束
+							   <?php elseif($vo["status"] == 0): ?>已取消
+							<?php else: ?> 
+								<a href="__APP__/Ball/cancel?id=<?php echo ($vo["id"]); ?>" class="cancel">取消报名</a><?php endif; ?>
+							</div>
+							<div style="clear:left"></div><?php endforeach; endif; ?>
+
+					</div>
+					<div>
+							<?php echo ($pager); ?>
+					</div>
+				</div>	
 			</div>
 		</div>
 	</div>
@@ -314,3 +320,14 @@
 	</script>
 </body>
 </html>
+<script>
+    var showLogin=<?=$lui?>;
+    if(showLogin==true){
+    	showLyarUi("login_ui",280,260);
+    }
+
+    function setPage(url){
+    	window.location.href=url;
+    }
+   
+</script>

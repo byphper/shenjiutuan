@@ -12,7 +12,7 @@
 <form id="usered" ng-submit="add()">
   标题:<input type="text" required class="form-control" style="width:350px" ng-model="ball.title">
   对手:<input type="text" required class="form-control" ng-model="ball.match_op">
-  时间:<input type="text" id="match_time" onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" required class="form-control">
+  时间:<input type="text" id="match_time" onfocus="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})"  onclick="WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'})" required class="form-control">
   地点:<input type="text" required class="form-control" ng-model="ball.match_address">
   球票价格:<input type="text" required class="form-control" ng-model="ball.ticket_cost">
   跟车费用:<input type="text" required class="form-control" ng-model="ball.car_cost"><br />

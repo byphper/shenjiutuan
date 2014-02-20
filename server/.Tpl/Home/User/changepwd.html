@@ -1,0 +1,62 @@
+<include file="./server/.Tpl/public/head.html" />
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/userdetails.css" />
+	<div class="center">
+		<div id="warp">
+			<div>
+				<img src="__PUBLIC__/img/person.png" width="25" height="30" />
+						&nbsp;<span id="person_title">个人中心</span>
+			</div>
+			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9">
+				<div id="left">
+					<li><a href="__APP__/User/balldeatils">看球记录</a></li>
+					<li><a href="__APP__/User/partydeatils"  >聚会记录</a></li>
+					<li><a href="__APP__/User/changePwd" style="color: #c03e3e;;font-weight:bold;font-size:14px;">修改密码</a></li>
+				</div>
+				<div id="right">
+					<form class="form-horizontal" method="POST" action="__APP__/User/changePwdPost" role="form">
+					  <div class="form-group">
+					    <label for="inputEmail3" class="col-sm-2 control-label">旧密码</label>
+					    <div class="col-sm-10">
+					      <input type="password" class="form-control" id="inputEmail3" placeholder="旧密码" name="old">
+					    </div>
+					  </div>
+					  <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">新密码</label>
+					    <div class="col-sm-10">
+					      <input type="password" class="form-control" id="inputPassword3" placeholder="新密码" name="new1">
+					    </div>
+					  </div>
+					   <div class="form-group">
+					    <label for="inputPassword3" class="col-sm-2 control-label">新密码</label>
+					    <div class="col-sm-10">
+					      <input type="password" class="form-control" id="inputPassword3" placeholder="确认密码" name="new2">
+					    </div>
+					  </div>
+					  
+					  <div class="form-group">
+					    <div class="col-sm-offset-2 col-sm-10">
+					      <button type="submit" class="btn btn-default">确认修改</button>
+					    </div>
+					  </div>
+					</form>
+				</div>	
+			</div>
+		</div>
+	</div>
+<include file="./server/.Tpl/public/footer.html" />
+<style>
+.control-label{
+	color:red;
+}
+</style>
+<script>
+    var showLogin=<?=$lui?>;
+    if(showLogin==true){
+    	showLyarUi("login_ui",280,260);
+    }
+
+    function setPage(url){
+    	window.location.href=url;
+    }
+   
+</script>

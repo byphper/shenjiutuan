@@ -315,7 +315,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
             $scope.ball.id = id;
             $http.post($url, $scope.ball).success(function(data) {
                 if (data.status) {
-                    $location.path("/ball/ball_list");
+                    window.location.href = "./main.php#/ball/ball_list";
                 } else {
                     alert(data.msg);
                 }

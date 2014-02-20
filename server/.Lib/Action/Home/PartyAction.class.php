@@ -1,5 +1,5 @@
 <?php
-class BallAction extends BaseAction {
+class PartyAction extends BaseAction {
 
    public function cancel(){
      
@@ -32,13 +32,12 @@ class BallAction extends BaseAction {
 
    }
     
-    public function ballList(){
+    public function partyList(){
         import("ORG.Util.Page");
         $get=$_GET;
         $page=$get['page']?$get['page']:1;
-        $state=$get['state'];
        
-        $ballModel=D("Ball");
+        $ballModel=D("Party");
         $count=$ballModel->count();
         $data=$ballModel->getPage($page,13,"status!=0",'id desc',array("id","status","title","date"));
         $pager=new Page($count,13,"setPage","changePage"); 
@@ -53,32 +52,32 @@ class BallAction extends BaseAction {
 
     }
 
-    public function applydetails(){
+     public function partydeatils(){
          $id=$_GET['id'];
           if(!is_numeric($id)){
              exit;
           }
-         $Ball=D("Ball");
-         $data=$Ball->getOne(array("id"=>$id));
+         $Party=D("Party");
+         $data=$Party->getOne(array("id"=>$id));
          if(empty($data)){
-            $this->alert("../Ball/balllist","错误参数!");
+            $this->alert("../Party/partydeatils","错误参数!");
          }
-
-        
+        $data[0]['content']=nl2br($data[0]['content']);
         $this->assign('data',$data);
         $this->display();   
     }
 
 
     public function applycheck(){
+        $user=$this->checkLogin();
         $msg=array();
-        if(!isset($_SESSION['user'])||empty($_SESSION['user'])){
+        if(!isset($user)||empty($user)){
             $msg['status']=0;
             $msg['msg']="您还没有登陆";
             echo $this->echoJsonMsg($msg);
             exit;
         }
-        $isVip=$_SESSION['user']['isVip'];
+        $isVip=$user['isVip'];
         if(!$isVip){
              $msg['status']=0;
              $msg['msg']="您不是內部會員";
@@ -93,17 +92,17 @@ class BallAction extends BaseAction {
               echo $this->echoJsonMsg($msg);
              exit;
         }
-        $ballModel=D("Ball");
-        $ball=$ballModel->getOne(array("id"=>$id));
-        if($ball[0]['status']!=1){
+        $Party=D("Party");
+        $pdata=$Party->getOne(array("id"=>$id));
+        if($pdata[0]['status']!=1){
              $msg['status']=0;
              $msg['msg']="信息错误";
              echo $this->echoJsonMsg($msg);
              exit;
         }
-        $uid=$_SESSION['user']['id'];
-        $logModel=D("BallLog");
-        $log=$logModel->getOne(array("tid"=>$id,"uid"=>$uid));
+        $uid=$user['id'];
+        $logModel=D("PartyLog");
+        $log=$logModel->getOne(array("pid"=>$id,"uid"=>$uid));
         
         if(!empty($log)){
              $msg['status']=0;
@@ -114,62 +113,47 @@ class BallAction extends BaseAction {
          echo $this->echoJsonMsg($msg);
     }
 
-    public function addBallLog(){
+    public function addpartylog(){
         $refer=$_SERVER['HTTP_REFERER'];
-        $isVip=$_SESSION['user']['isVip'];
+        $user=$this->checkLogin();
+        if(!$user){
+            $this->alert($refer,"请登录后再报名！");
+            exit;
+        }
+        $isVip=$user['isVip'];
         if(!$isVip){
              $this->alert($refer,"您还不是内部会员！");
              exit;
         }
 
-        $tid=$this->filter($_POST['tid']);
+        $pid=$this->filter($_POST['pid']);
 
-        if(!is_numeric($tid)){
+        if(!is_numeric($pid)){
             $this->alert($refer,"参数错误！");
             exit;
         }
-        $ball=D("Ball");
-        $ballInfo=$ball->getOne(array("id"=>$tid),array("status"));
-       
-        if($ballInfo[0]['status']!=1){
+        $party=D("Party");
+        $partyinfo=$party->getOne(array("id"=>$pid),array("status"));
+
+        if($partyinfo[0]['status']!=1){
             $this->alert($refer,"参数错误！");
             exit;
         }    
-        $watch_nums=$this->filter($_POST['watch_nums']);
-        if(!is_numeric($watch_nums)&&($watch_nums>10||$watch_nums<1)){
-            $this->alert($refer,"参数错误！");
-            exit;
-        }
-        $ticket_nums=$this->filter($_POST['ticket_nums']);
-        if(!is_numeric($ticket_nums)&&($ticket_nums>10||$ticket_nums<1)){
-            $this->alert($refer,"参数错误！");
-            exit;
-        }
-        $car_nums=$this->filter($_POST['car_nums']);
-        $goadd=$this->filter($_POST['goadd']);
-        $style=$this->filter($_POST['style']);
+        $party_nums=$this->filter($_POST['party_nums']);
 
-        if($style==1){
-            if(!is_numeric($car_nums)&&($car_nums>10||$car_nums<1)){
-                $this->alert($refer,"参数错误！");
-                exit;
-            }
-            if(empty($goadd)){
-                  $this->alert($refer,"请选择上车地点");
-                exit;
-            }
-        }else{
-            $goadd="不跟车";
+        if(!is_numeric($party_nums)&&($party_nums>10||$party_nums<1)){
+            $this->alert($refer,"参数错误！");
+            exit;
         }
-        $uid=$_SESSION['user']['id'];
-        $nickname=$_SESSION['user']['nickname'];
+        $uid=$user['id'];
+        $nickname=$user['nickname'];
         $date=date("Y-m-d H:i:s",time());
         $title=$this->filter($_POST['title']);
-        $data=array("status"=>1,"title"=>$title,"date"=>$date,"nickname"=>$nickname,"tid"=>$tid,"uid"=>$uid,"watch_nums"=>$watch_nums,"ticket_nums"=>$ticket_nums,"style"=>$style,"car_nums"=>$car_nums,"goadd"=>$goadd);
-        $log=D("BallLog");
+        $data=array("title"=>$title,"status"=>1,"date"=>$date,"nickname"=>$nickname,"pid"=>$pid,"uid"=>$uid,"nums"=>$party_nums);
+        $log=D("PartyLog");
         $result=$log->addData($data);
         if($result){
-              $this->alert("../User/balldeatils","报名成功!");
+              $this->alert("../User/partydeatils","报名成功!");
         }else{
              $this->alert($refer,"报名失败!");
         }

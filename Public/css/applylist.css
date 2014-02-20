@@ -1,5 +1,12 @@
 
 /*------*/
+#ball_title{
+	color:red;
+	font-size: 16px;
+	font-weight: bold;
+	border-bottom: 1px solid #ecd9d9;
+
+}
 #news{
 	margin-top: 10px;
 	padding-left: 20px;
@@ -8,6 +15,7 @@
     -webkit-border-radius: 10px;   /* Webkit browsers */
     border-radius:10px;  
     min-height: 500px; 
+    padding-top: 5px;
 }
 
 #news li{
@@ -20,6 +28,9 @@
 	width: 55%;
 	line-height: 30px;
 	padding-bottom: 20px;
+}
+#newsleft select{
+	display: none;
 }
 #newsright{
 	float: right;

@@ -67,33 +67,39 @@
                $('#demo1').slideBox();
             });
     </script>
+<link rel="stylesheet" type="text/css" href="__PUBLIC__/css/partylist.css" />
 	<div class="center">
-		<div id="con_intr"></div>
-		<div id="con_img">
-			<div id="demo1" class="slideBox">
-				<ul class="items">
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/1.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="现场助威">
-							<img src="__PUBLIC__/upload/2.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="深圳聚会看球">
-							<img src="__PUBLIC__/upload/3.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/4.jpg" width="960" height="500"></a>
-					</li>
-					<li>
-						<a href="#" title="一路追隨">
-							<img src="__PUBLIC__/upload/5.jpg" width="960" height="500"></a>
-					</li>
-				</ul>
+		<div id="news">
+
+			<div id="newsleft" class="newslist">
+				<div style="min-height:500px;">
+					<div><img src="__PUBLIC__/img/party.png" width="25" height="25" />
+						&nbsp;<span id="ball_title">最新聚会信息</span></div>
+					<?php if(is_array($data)): foreach($data as $key=>$vo): ?><div class="newsitem">
+						<div class="leftA">
+							<li>
+								<a href="__APP__/Party/partydeatils?id=<?php echo ($vo["id"]); ?>"><?php echo ($vo["title"]); ?></a>
+							</li>
+						</div>
+						<div class="rightD">
+						<span style="color:red">
+							<?php if($vo["status"] == 2): ?>已结束
+							<?php elseif($vo["status"] == 1): ?>正接受報名
+							<?php else: ?> 
+								xx<?php endif; ?>
+
+						</span></div>
+						<div style="clear:left"></div>
+					</div><?php endforeach; endif; ?>
+					
+				</div>
+				<div>
+					<?php echo ($pager); ?>
+				</div>
 			</div>
+			<div id="newsright" class="newslist">
+			</div>
+			<div style="clear:left"></div>
 		</div>
 	</div>
 <div id="foot">

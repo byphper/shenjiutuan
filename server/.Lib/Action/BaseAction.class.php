@@ -5,6 +5,13 @@ class BaseAction extends Action {
 		session_start();
 	}
 
+	protected function checkLogin(){
+			if(isset($_SESSION['user'])&&!empty($_SESSION['user'])){
+				return $_SESSION['user'];
+			}
+			return false;
+	}
+
     protected function filter($var){
 		$var=filter_var($var, FILTER_SANITIZE_STRING);
 		return filter_var($var, FILTER_SANITIZE_MAGIC_QUOTES);

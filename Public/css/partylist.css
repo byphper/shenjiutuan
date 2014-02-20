@@ -14,8 +14,8 @@
 	-moz-border-radius: 10px;      /* Gecko browsers */
     -webkit-border-radius: 10px;   /* Webkit browsers */
     border-radius:10px;  
-    min-height: 500px;
-     padding-top: 10px;
+    min-height: 500px; 
+    padding-top: 5px;
 }
 
 #news li{
@@ -29,11 +29,14 @@
 	line-height: 30px;
 	padding-bottom: 20px;
 }
+#newsleft select{
+	display: none;
+}
 #newsright{
 	float: right;
 	width: 40%;
 	height: 330px;
-	background-image: url("../img/lipi2.png");
+	background-image: url("../img/pbg.png");
 	margin-top: 10px;
 	margin-right: 5px;
 }
@@ -43,7 +46,7 @@
 }
 .rightD{
 	float: right;
-	color:red;
+	color:gray;
 	padding-right: 5px;
 }
 .leftA a{

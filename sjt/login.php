@@ -1,4 +1,5 @@
-﻿<?php
+﻿<?php 
+error_reporting(0);
 session_start();
 if(isset($_SESSION['user'])&&$_SESSION['user']['isAdmin']==1){
 	echo "<script>window.location.href='main.php'</script>";
@@ -11,7 +12,7 @@ if(isset($_SESSION['user'])&&$_SESSION['user']['isAdmin']==1){
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>深九团后台管理平台</title>
 <style type="text/css">
-<!--
+
 body {
 	margin-left: 0px;
 	margin-top: 0px;
@@ -24,7 +25,7 @@ body {
 	color: #42870a;
 	font-size: 12px;
 }
--->
+
 </style></head>
 <script src="../js/jquery-1.9.1.js"></script>
 <body>
