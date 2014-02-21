@@ -13,6 +13,9 @@
 				<div class="intro">比赛地点:{$data[0].match_address}</div>
 				<div class="intro">门票:RMB{$data[0].ticket_cost}&emsp;车费:RMB{$data[0].car_cost}(来回,可选择不跟车)</div>
 				<div class="intro">看台:6区</div>
+				<div class="intro" style="text-align:left;width:300px;margin:0 auto;margin-top:10px;color:red">
+					{$data[0].remark|nl2br}
+				</div>
 				<div class="intro">
 					
 					<?php

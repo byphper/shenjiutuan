@@ -38,7 +38,7 @@ app.config(['$routeProvider',
             },
             controller: 'partyCtrl'
         }).when('/about', {
-            templateUrl:"tpl/about.html",
+            templateUrl: "tpl/about.html",
             controller: 'aboutCtrl'
         });
     }
@@ -46,20 +46,22 @@ app.config(['$routeProvider',
 
 app.controller('aboutCtrl', ['$scope', '$http', '$location', '$routeParams',
     function($scope, $http, $location, $routeParams) {
-            $http.get("../index.php/Admin/about/get").success(function(data){
-                $("#editor").html(data.data[0].content);
-                UE.getEditor('editor');
-                 
-            });
+        $http.get("../index.php/Admin/about/get").success(function(data) {
+            $("#editor").html(data.data[0].content);
+            UE.getEditor('editor');
 
-            $scope.about=function(){
-                 var c = document.getElementsByName("cnm");
-                 $http.post("../index.php/Admin/about/add",{content:$(c).val()}).success(function(data){
-                    if(data=='1'){
-                        alert("修改成功");
-                    }
-                 });
-            }
+        });
+
+        $scope.about = function() {
+            var c = document.getElementsByName("cnm");
+            $http.post("../index.php/Admin/about/add", {
+                content: $(c).val()
+            }).success(function(data) {
+                if (data == '1') {
+                    alert("修改成功");
+                }
+            });
+        }
     }
 ]);
 
@@ -117,18 +119,18 @@ app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
             }
         } else if (curd == "party_logs") {
             var del = $routeParams.del;
-            var lid=$routeParams.lid;
+            var lid = $routeParams.lid;
             if (del == 'true') {
                 var flag = window.confirm("确认删除？");
                 if (flag) {
                     if (lid = parseInt(lid)) {
                         $http.get("../index.php/Admin/party/dellog?lid=" + lid).success(function(data) {
-                            if (data!= '1') {
+                            if (data != '1') {
                                 alert("删除失败!");
                             } else {
                                 alert("删除成功！");
                             }
-                            window.location.href = "./main.php#party/party_logs?id="+id;
+                            window.location.href = "./main.php#party/party_logs?id=" + id;
                         });
                     }
                 }
@@ -139,13 +141,13 @@ app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
                     if (data != "-1") {
                         $scope.logs = data.data;
                         $scope.title = data.title[0].title;
-                        $scope.id=data.title[0].id;
+                        $scope.id = data.title[0].id;
                     }
 
                 });
             }
         } else if (curd == "partylog_edit") {
-             var lid=$routeParams.lid;
+            var lid = $routeParams.lid;
             if (lid = parseInt(lid)) {
                 $http.get("../index.php/Admin/party/getOnePartyLog?id=" + lid).success(function(data) {
                     if (data != "-1") {
@@ -158,15 +160,15 @@ app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
 
         $scope.edit_log = function() {
             var $url = "../index.php/Admin/party/updatelog";
-             var lid=$routeParams.lid;
-            if (lid = parseInt(lid)){
+            var lid = $routeParams.lid;
+            if (lid = parseInt(lid)) {
                 $scope.log.id = lid;
                 $http.post($url, $scope.log).success(function(data) {
                     if (data.status != '1') {
                         alert(data.msg);
                     } else {
                         alert(data.msg);
-                         window.location.href = "./main.php#party/party_logs?id="+id;
+                        window.location.href = "./main.php#party/party_logs?id=" + id;
                     }
                 });
             }
@@ -177,7 +179,7 @@ app.controller('partyCtrl', ['$scope', '$http', '$location', '$routeParams',
         }
 
         $scope.add = function() {
-            $scope.party.id=id;
+            $scope.party.id = id;
             $http.post($url, $scope.party).success(function(data) {
                 if (data.status) {
                     alert(data.msg);
@@ -237,6 +239,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                         $scope.ball.ticket_cost = data[0].ticket_cost;
                         $scope.ball.car_cost = data[0].car_cost;
                         $scope.ball.status = data[0].status;
+                        $scope.ball.remark = data[0].remark;
                         $("#match_time").val(data[0].match_time);
                         $scope.type = "确认修改";
                     }
@@ -247,19 +250,19 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                 $scope.type = "确认添加";
             }
         } else if (curd == "ball_deatils") {
-            var lid=$routeParams.lid;
-             var del = $routeParams.del;
+            var lid = $routeParams.lid;
+            var del = $routeParams.del;
             if (del == 'true') {
                 var flag = window.confirm("确认删除？");
                 if (flag) {
                     if (lid = parseInt(lid)) {
                         $http.get("../index.php/Admin/ball/dellog?lid=" + lid).success(function(data) {
-                            if (data!= '1') {
+                            if (data != '1') {
                                 alert("删除失败!");
                             } else {
                                 alert("删除成功！");
                             }
-                            window.location.href = "./main.php#ball/ball_deatils?id="+id;
+                            window.location.href = "./main.php#ball/ball_deatils?id=" + id;
                         });
                     }
                 }
@@ -269,6 +272,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                 $http.get("../index.php/Admin/ball/balllog?id=" + id).success(function(data) {
                     if (data != "-1") {
                         $scope.logs = data.data;
+                        $scope.total=data.total[0];
                         $scope.title = data.title[0].title;
                         $scope.id = data.title[0].id;
                     }
@@ -289,17 +293,17 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
         $scope.edit_log = function() {
 
             var $url = "../index.php/Admin/ball/updatelog";
-           var bid=$routeParams.bid;
-            if($scope.log.style=='0'){
-                $scope.log.goadd="不跟車";
-                $scope.log.car_nums=0;
+            var bid = $routeParams.bid;
+            if ($scope.log.style == '0') {
+                $scope.log.goadd = "不跟車";
+                $scope.log.car_nums = 0;
             }
             $http.post($url, $scope.log).success(function(data) {
                 if (data == '0') {
                     alert(data.msg)
                 } else {
                     alert(data.msg);
-                   window.location.href = "./main.php#ball/ball_deatils?id="+bid;
+                    window.location.href = "./main.php#ball/ball_deatils?id=" + bid;
                 }
             });
         }
@@ -321,6 +325,8 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                 }
             });
         }
+
+
     }
 ]);
 
@@ -363,6 +369,18 @@ app.controller('userCtrl', ['$scope', '$http', '$location', '$routeParams',
                     $scope.page = data.page;
                     $("#page").html(data.page);
                 });
+
+        }
+
+        $scope.search = function() {
+            $val = $("#searchValue").val();
+            var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/user/ajaxGetUsers?page=1&search=" + $val;
+            $http.get($url).success(function(data) {
+                $scope.users = data.data;
+                $scope.page = data.page;
+                $("#page").html(data.page);
+            });
+
 
         }
 

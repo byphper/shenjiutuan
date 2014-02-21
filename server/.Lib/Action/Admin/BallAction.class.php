@@ -111,7 +111,7 @@ class BallAction extends AdminAction{
     }
 
     public function ballLog(){
-    	$id=$_GET['id'];
+    	    $id=$_GET['id'];
           if(!is_numeric($id)){
              echo "-1";
              exit;
@@ -120,7 +120,8 @@ class BallAction extends AdminAction{
          $data=$ballLog->getAll(array("tid"=>$id,"status"=>1));
          $BallModel=D("Ball"); 
          $title=$BallModel->getOne($data['tid'],array("title","id"));
-         $result=array("title"=>$title,"data"=>$data);
+         $total=$ballLog->query("select sum(ticket_nums) as totalT,sum(car_nums) as totalC,sum(watch_nums) as totalW from ticket_logs where tid=$id and status=1");
+         $result=array("title"=>$title,"data"=>$data,"total"=>$total);
          if(empty($data)){
          	echo "-1";
          }else{

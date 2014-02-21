@@ -21,7 +21,7 @@ class BallAction extends BaseAction {
          $this->alert($refer,"非法请求！");
           exit;
       }
-
+     
       $result=$log->delOne(array("id"=>$id));
       if($result){
          $this->alert($refer,"取消成功!");

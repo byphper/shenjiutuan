@@ -39,7 +39,10 @@
 		</div>
 		<div id="con_nav">
 			<li class="nav_item" style="margin-left:30px">
-				<a href="__APP__">首頁</a>
+				<a href="__APP__">首页</a>
+			</li>
+			<li class="nav_item">
+				<a href="__APP__/Index/about">关于深九团</a>
 			</li>
 			<li class="nav_item">
 				<a href="__APP__/News/newsList">新闻公告</a>
@@ -54,9 +57,7 @@
 				<a href="#">组织踢球</a>
 			</li>
 			
-			<li class="nav_item">
-				<a href="__APP__/Index/about">关于深九团</a>
-			</li>
+			
 
 		</div>
 	</div>
@@ -80,10 +81,13 @@
 				<div class="intro">比赛地点:<?php echo ($data[0]["match_address"]); ?></div>
 				<div class="intro">门票:RMB<?php echo ($data[0]["ticket_cost"]); ?>&emsp;车费:RMB<?php echo ($data[0]["car_cost"]); ?>(来回,可选择不跟车)</div>
 				<div class="intro">看台:6区</div>
+				<div class="intro" style="text-align:left;width:300px;margin:0 auto;margin-top:10px;color:red">
+					<?php echo (nl2br($data[0]["remark"])); ?>
+				</div>
 				<div class="intro">
 					
 					<?php
- if($data[0]['status']==1){ echo "<button id='applyball' type='button' class='btn btn-danger'>我要報名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; }else{ echo "<span style='color:gray;font-size:18px;'>未开放</span>"; } ?>
+ if($data[0]['status']==1){ echo "<button id='applyball' type='button' class='btn btn-danger'>我要报名</button>"; }else if($data[0]['status']==2){ echo "<span style='color:gray;font-size:18px;'>已结束</span>"; }else{ echo "<span style='color:gray;font-size:18px;'>未开放</span>"; } ?>
 				</div>
 			</div>
 		</div>

@@ -38,5 +38,16 @@
         <td><a href="#/ball/log_edit?id={{log.id}}&bid={{id}}">编辑</a>&nbsp;<a href="#/ball/ball_deatils/?lid={{log.id}}&del=true&id={{id}}">删除</a></td>
       </tr>
     </tbody>
+    <tfoot style="color:red;font-weight:bold">
+      <tr>
+        <td colspan="2">总看球人数:&nbsp;<span style="color:blue" >{{total.totalW}}</span></td>
+      </tr>
+      <tr>
+      <td colspan="2">总跟车人数:&nbsp;<span style="color:blue" >{{total.totalC}}</span></td>
+      </tr>
+      <tr>
+        <td colspan="2">总票数:&nbsp;<span style="color:blue" >{{total.totalT}}</span></td>
+      </tr>
+    </tfoot>>
   </table>
 </div>
