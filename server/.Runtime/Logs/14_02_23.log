@@ -1,0 +1,229 @@
+[ 2014-02-23T02:09:32+08:00 ] 119.147.146.192 /index.php/user/balldeatils
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.005035s ]
+INFO: [ route_check ] --END-- [ RunTime:0.005140s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.007499s ]
+NOTIC: [8] Undefined index:  user /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/Home/UserAction.class.php 第 90 行.
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.184905s ]
+INFO: [ view_template ] --END-- [ RunTime:0.053511s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined variable: data /home/wcmscom/public_html/50290749/g12d9.com/server/.Runtime/Cache/Home/186979f1ab3cca4eb04e5b8270062d54.php 第 86 行.
+NOTIC: [8] Undefined variable: pager /home/wcmscom/public_html/50290749/g12d9.com/server/.Runtime/Cache/Home/186979f1ab3cca4eb04e5b8270062d54.php 第 99 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.238447s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.412732s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.651204s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.661069s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.666562s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.670969s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.023908s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.675187s ]
+INFO: [ view_end ] --END-- [ RunTime:0.008028s ]
+
+[ 2014-02-23T02:10:42+08:00 ] 119.147.146.189 /index.php/index.php
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000400s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000225s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000275s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.042763s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000200s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.042988s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043215s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.086225s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.086412s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.086584s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.086697s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000705s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.086967s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000303s ]
+
+[ 2014-02-23T03:32:46+08:00 ] 183.60.35.78 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.030953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.031066s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.050311s ]
+INFO: [ view_template ] --END-- [ RunTime:0.053913s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.104261s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.511668s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.615958s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.661238s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.665228s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.919107s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.363075s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.979127s ]
+INFO: [ view_end ] --END-- [ RunTime:0.045258s ]
+
+[ 2014-02-23T13:51:33+08:00 ] 116.25.25.62 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000651s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000741s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.014476s ]
+INFO: [ view_template ] --END-- [ RunTime:0.002457s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.016959s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.427025s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.444017s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.459894s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.462959s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.466371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.041583s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.485641s ]
+INFO: [ view_end ] --END-- [ RunTime:0.003717s ]
+
+[ 2014-02-23T14:12:36+08:00 ] 220.181.132.217 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000259s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000339s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.000375s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000185s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.000585s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005345s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.005953s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.006157s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.006329s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.006444s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000717s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.006707s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000421s ]
+
+[ 2014-02-23T23:17:27+08:00 ] 58.250.186.177 /
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000867s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.005453s ]
+INFO: [ view_template ] --END-- [ RunTime:0.004800s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.010298s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.391417s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.401737s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.418091s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.420463s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.425125s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.024410s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.426201s ]
+INFO: [ view_end ] --END-- [ RunTime:0.018095s ]
+
+[ 2014-02-23T23:17:48+08:00 ] 58.250.186.177 /index.php/Ball/ballList
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.107162s ]
+INFO: [ route_check ] --END-- [ RunTime:0.107255s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000307s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000312s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/BaseAction.class.php 第 5 行.
+NOTIC: [8] Undefined index:  page /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/Home/BallAction.class.php 第 38 行.
+NOTIC: [8] Undefined index:  state /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/Home/BallAction.class.php 第 39 行.
+SQL: SHOW COLUMNS FROM `booktickets` [ RunTime:0.003287s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `booktickets` LIMIT 1   [ RunTime:0.000111s ]
+SQL: SELECT `id`,`status`,`title`,`date` FROM `booktickets` WHERE status!=0 ORDER BY id desc LIMIT 0,13   [ RunTime:0.000222s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.149688s ]
+INFO: [ view_template ] --END-- [ RunTime:0.008033s ]
+INFO: [ view_parse ] --START--
+INFO: Run ParseTemplate Behavior [ RunTime:-0.157770s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.025322s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.183110s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.183295s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.183470s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.183582s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000703s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.183854s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000301s ]
+
+[ 2014-02-23T23:17:49+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-23T23:17:49+08:00 ] 58.250.186.177 /index.php/Ball/undefined
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000400s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000476s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000254s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000277s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/BaseAction.class.php 第 5 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  args /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class BallAction could not be converted to string /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+
+[ 2014-02-23T23:18:47+08:00 ] 58.250.186.177 /index.php/Ball/applydetails?id=18
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000400s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000258s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000279s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/BaseAction.class.php 第 5 行.
+SQL: SHOW COLUMNS FROM `booktickets` [ RunTime:0.003004s ]
+SQL: SELECT `id`,`title`,`remark`,`maxnums`,`status`,`date`,`match_time`,`match_address`,`ticket_cost`,`car_cost`,`match_op` FROM `booktickets` WHERE id='18'  LIMIT 0,1   [ RunTime:0.000167s ]
+INFO: [ view_template ] --START--
+INFO: Run LocationTemplate Behavior [ RunTime:-0.010219s ]
+INFO: [ view_template ] --END-- [ RunTime:0.000248s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index:  user /home/wcmscom/public_html/50290749/g12d9.com/server/.Runtime/Cache/Home/6274672abe9f2fba805a9ca43b9eb977.php 第 106 行.
+INFO: Run ParseTemplate Behavior [ RunTime:-0.010499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154850s ]
+INFO: [ view_filter ] --START--
+INFO: Run ContentReplace Behavior [ RunTime:-0.165407s ]
+INFO: Run TokenBuild Behavior [ RunTime:-0.165709s ]
+INFO: Run WriteHtmlCache Behavior [ RunTime:-0.165963s ]
+INFO: Run ShowRuntime Behavior [ RunTime:-0.166130s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001067s ]
+INFO: [ view_end ] --START--
+INFO: Run ShowPageTrace Behavior [ RunTime:-0.166542s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000447s ]
+
+[ 2014-02-23T23:18:48+08:00 ] ERR: (ThinkException) 非法操作:undefined
+[ 2014-02-23T23:18:48+08:00 ] 58.250.186.177 /index.php/Ball/undefined
+INFO: [ route_check ] --START--
+INFO: Run CheckRoute Behavior [ RunTime:0.000395s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000468s ]
+INFO: [ app_begin ] --START--
+INFO: Run ReadHtmlCache Behavior [ RunTime:-0.000255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000285s ]
+NOTIC: [8] A session had already been started - ignoring session_start() /home/wcmscom/public_html/50290749/g12d9.com/server/.Lib/Action/BaseAction.class.php 第 5 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  args /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  file /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [8] Undefined index:  line /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 62 行.
+NOTIC: [4096] Object of class BallAction could not be converted to string /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Array to string conversion /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 64 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  class /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+NOTIC: [8] Undefined index:  type /home/wcmscom/public_html/50290749/g12d9.com/server/ThinkPHP/Lib/Core/ThinkException.class.php 第 63 行.
+

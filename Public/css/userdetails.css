@@ -21,6 +21,10 @@
 	
 
 }
+.logtd{
+	width:80px;
+}
+
 #left a{
 	color: red;
 }
@@ -35,7 +39,7 @@
 #right{
 	float: left;
 	margin-left: 20px;
-	width: 500px;
+	width: 800px;
 	min-height: 200px;
 	padding-top: 6px;
 	line-height: 25px;

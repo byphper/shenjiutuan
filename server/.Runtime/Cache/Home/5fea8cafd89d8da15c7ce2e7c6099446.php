@@ -39,10 +39,7 @@
 		</div>
 		<div id="con_nav">
 			<li class="nav_item" style="margin-left:30px">
-				<a href="__APP__">首页</a>
-			</li>
-			<li class="nav_item">
-				<a href="__APP__/Index/about">关于深九团</a>
+				<a href="__APP__">首頁</a>
 			</li>
 			<li class="nav_item">
 				<a href="__APP__/News/newsList">新闻公告</a>
@@ -57,7 +54,9 @@
 				<a href="#">组织踢球</a>
 			</li>
 			
-			
+			<li class="nav_item">
+				<a href="__APP__/Index/about">关于深九团</a>
+			</li>
 
 		</div>
 	</div>

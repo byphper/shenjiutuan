@@ -99,7 +99,7 @@ class UserAction extends BaseAction {
         $log=D("BallLog");
         $count=$log->customCount("uid=".$uid);
 
-        $data=$log->getPage($page,8,array("uid"=>$uid),'id desc',array("id","status","title","date"));
+        $data=$log->getPage($page,8,array("uid"=>$uid),'id desc',true);
         $pager=new Page($count,8,"setPage","changePage"); 
         $this->assign('data',$data);
        	$showPager=$pager->fpage();

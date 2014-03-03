@@ -1,0 +1,1 @@
+{"0":"id","1":"title","2":"content","3":"user","4":"date","5":"status","6":"views","_autoinc":true,"_pk":"id","_type":{"id":"int(11)","title":"varchar(50)","content":"text","user":"varchar(20)","date":"datetime","status":"smallint(2)","views":"int(11)"}}

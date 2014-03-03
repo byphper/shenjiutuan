@@ -5,12 +5,12 @@
   -moz-border-radius: 15px;
   -webkit-border-radius: 15px;
   padding: 10px;
-  width: 900px;
+  width: 1200px;
  } 
 </style>
 <div id="balldeatils">
-  <input type="button" value="下载成excel文件" class="btn btn-info" /><br /><br />
-  <table style="width:900px;line-height:30px;">
+  <input type="button" ng-click="downloadlog(id)" value="下载成excel文件" class="btn btn-info" /><br /><br />
+  <table style="width:1200px;line-height:30px;">
     <caption style="font-size:18px;">{{title}}</caption>
     <thead>
       <tr style="color:red;font-weight:bold;font-size:16px">
@@ -22,6 +22,7 @@
         <th>上车地点</th>
         <th>是否付款</th>
         <th>报名时间</th>
+        <th>备注</th>
         <th>操作</th>
       </tr>
     </thead>
@@ -34,7 +35,9 @@
         <td>{{log.style==1?'是':'否'}}</td>
         <td>{{log.goadd}}</td>
         <td>{{log.isPay==1?'是':'否'}}</td>
+
         <td>{{log.date}}</td>
+         <td>{{log.remark}}</td>
         <td><a href="#/ball/log_edit?id={{log.id}}&bid={{id}}">编辑</a>&nbsp;<a href="#/ball/ball_deatils/?lid={{log.id}}&del=true&id={{id}}">删除</a></td>
       </tr>
     </tbody>
@@ -48,6 +51,6 @@
       <tr>
         <td colspan="2">总票数:&nbsp;<span style="color:blue" >{{total.totalT}}</span></td>
       </tr>
-    </tfoot>>
+    </tfoot>
   </table>
 </div>

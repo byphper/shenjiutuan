@@ -1,0 +1,1 @@
+{"0":"id","1":"title","2":"content","3":"status","4":"date","_autoinc":true,"_pk":"id","_type":{"id":"int(11)","title":"varchar(50)","content":"text","status":"smallint(6)","date":"datetime"}}

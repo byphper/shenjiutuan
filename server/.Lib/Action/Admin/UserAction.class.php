@@ -115,13 +115,14 @@ class UserAction extends BaseAction {
         $search=$get['search'];
         
         if(!empty($search)){
-        	 $count=$userModel->customCount("nickname like '%".$serach."%'");
+        	 $count=$userModel->customCount("nickname like '%".$search."%'");
+        	
        		 $data=$userModel->getPage($page,15,"status=1 and nickname like '%{$search}%'",true);
         }else{
         	 $count=$userModel->count();
         	 $data=$userModel->getPage($page,15,array("status"=>1),true);
         }
-       
+      
         $pager=new Page($count,15,"setPage","changePage");
         $data=array("data"=>$data,"page"=>$pager->fpage());
         echo $this->echoJsonMsg($data);

@@ -6,28 +6,40 @@
 				<img src="__PUBLIC__/img/person.png" width="25" height="30" />
 						&nbsp;<span id="person_title">个人中心</span>
 			</div>
-			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9">
+			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9;min-height:400px;">
 				<div id="left">
 					<li><a href="__APP__/User/balldeatils" style="color: #c03e3e;;font-weight:bold;font-size:14px;">看球记录</a></li>
 					<li><a href="__APP__/User/partydeatils">聚会记录</a></li>
 					<li><a href="__APP__/User/changePwd">修改密码</a></li>
 				</div>
 				<div id="right">
-					<div style="min-height:190px;">
+					<div style="min-height:370px;">
 						
-						<foreach name="data" item="vo">
-							<div class="left">
-								{$vo.title}
-							</div>
-							<div class="right">
-								<if condition="$vo.status eq 2">已结束
-							   <elseif condition="$vo.status eq 0"/>已取消
-							<else /> 
-								<a href="__APP__/Ball/cancel?id={$vo.id}" class="cancel">取消报名</a>
-							</if>
-							</div>
-							<div style="clear:left"></div>
-						</foreach>
+						<table style="width:700px;">
+							
+							<tbody>
+								<foreach name="data" item="vo">
+									<tr>
+										<td>{$vo.title}</td>
+										<td class="logtd">{$vo.watch_nums}人看球</td>
+										<td class="logtd">{$vo.ticket_nums}张球票</td>
+										<td class="logtd">{$vo.car_nums}人跟车</td>
+										<td class="logtd">{$vo.goadd}</td>
+										<td class="logtd">
+											<if condition="$vo.isPay eq 1">已付款
+											<else />
+											未付款
+										</if>
+										</td>
+										<td><if condition="$vo.status eq 2">已结束
+										   <elseif condition="$vo.status eq 0"/>已取消
+										<else /> 
+											<a href="__APP__/Ball/cancel?id={$vo.id}" class="cancel">取消报名</a>
+										</if></td>
+									</tr>
+								</foreach>
+							</tbody>
+						</table>
 
 					</div>
 					<div>

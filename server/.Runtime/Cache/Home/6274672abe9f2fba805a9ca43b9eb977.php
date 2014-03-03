@@ -20,7 +20,7 @@
 					<?php
  if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
-							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
+							<button id="login" class="btn btn-primary btn-sm custom">登录</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
 					<?php } ?>
 					
@@ -94,12 +94,12 @@
 	</div>
 
 
-	<div id="applyform" style="display:none;">
+	<div id="applyform" style="display:none;" ;>
 		<div id="ball_head">报名看球</div>
 		<ul id="notice">
-			<li>1.报名成功后请把球票和跟车费用转到支付宝xxxo账号下</li>
+			<li>1.报名成功后请把球票和跟车费用按深九团财务ALICE指导付款</li>
 			<li>2.如果报名后，迟迟不付款将取消名额</li>
-			<li>3.支付成功请把订单截图发送给福田-菜牛</li>
+			<li>3.支付成功请把订单截图发送给南山-菜牛</li>
 		</ul>
 		<hr style="border:#ecd9d9 1px solid">
 		<form id="formdetiles" action="__APP__/Ball/addBallLog" method="post">
@@ -124,6 +124,7 @@
 			<div>
 				<span>球票数量：&emsp;</span>
 				<select name="ticket_nums" style="width:100px">
+				  <option value='0'>0</option>
 		          <option value='1'>1</option>
 		          <option value='2'>2</option>
 		          <option value='3'>3</option>
@@ -164,13 +165,16 @@
 				<select name="goadd">
 					<option value="布吉">布吉</option>
 					<option value="机场东">机场东</option>
-					<option value="直升机机场">直升机机场</option>
-					<option value="香蜜湖">香蜜湖</option>
+					<option value="直升机场">直升机机场</option>
+					<option value="华茂苑">华茂苑</option>
 				</select>
 			</div>
 			<div>
-				<input type="submit" class="btn btn-info" value="提交" />
+				备注：<textarea name="remark" class="form-control" style="width:300px" rows="2"></textarea><input type="submit" class="btn btn-info" value="提交" />
+
 			</div>
+			
+			
 		</form>
 
 	</div>
@@ -181,7 +185,7 @@
 				
 				$.getJSON('__APP__/Ball/applycheck?id=<?php echo ($data[0]["id"]); ?>', function(data) {
 					if(data.status==1){
-						showLyarUi("applyform",480,420);
+						showLyarUi("applyform",480,650);
 					}else{
 						alert(data.msg);
 					}
@@ -267,7 +271,7 @@
 			</div>	
 
 			<div>
-				© 2013-2014&emsp;深九团版权所有
+				© 2013-2014&emsp;深九团版权所有<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000281957'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1000281957%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 			</div>
 		</div>
 	</div>
@@ -294,7 +298,7 @@
 					<br/>
 				</div>
 				<div>
-					<input class="btn btn-default" type="submit" value="登陆" />
+					<input class="btn btn-default" type="submit" value="登录" />
 					&emsp;
 					<input class="btn btn-default" type="reset" value="重置" />
 				</div>
@@ -416,5 +420,6 @@
 		}
 		
 	</script>
+	
 </body>
 </html>

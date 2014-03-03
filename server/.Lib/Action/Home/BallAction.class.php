@@ -79,12 +79,12 @@ class BallAction extends BaseAction {
             exit;
         }
         $isVip=$_SESSION['user']['isVip'];
-        if(!$isVip){
+        /*if(!$isVip){
              $msg['status']=0;
              $msg['msg']="您不是內部會員";
               echo $this->echoJsonMsg($msg);
              exit;
-        }
+        }*/
 
         $id=$_GET['id'];
         if(!is_numeric($id)){
@@ -116,11 +116,6 @@ class BallAction extends BaseAction {
 
     public function addBallLog(){
         $refer=$_SERVER['HTTP_REFERER'];
-        $isVip=$_SESSION['user']['isVip'];
-        if(!$isVip){
-             $this->alert($refer,"您还不是内部会员！");
-             exit;
-        }
 
         $tid=$this->filter($_POST['tid']);
 
@@ -135,6 +130,14 @@ class BallAction extends BaseAction {
             $this->alert($refer,"参数错误！");
             exit;
         }    
+        /*if($ballInfo[0]['openObject']){
+             $isVip=$_SESSION['user']['isVip'];
+             if(!$isVip){
+              $this->alert($refer,"您还不是内部会员！");
+               exit;
+              }
+        }*/
+
         $watch_nums=$this->filter($_POST['watch_nums']);
         if(!is_numeric($watch_nums)&&($watch_nums>10||$watch_nums<1)){
             $this->alert($refer,"参数错误！");
@@ -160,12 +163,15 @@ class BallAction extends BaseAction {
             }
         }else{
             $goadd="不跟车";
+            $car_nums=0;
         }
         $uid=$_SESSION['user']['id'];
         $nickname=$_SESSION['user']['nickname'];
         $date=date("Y-m-d H:i:s",time());
         $title=$this->filter($_POST['title']);
-        $data=array("status"=>1,"title"=>$title,"date"=>$date,"nickname"=>$nickname,"tid"=>$tid,"uid"=>$uid,"watch_nums"=>$watch_nums,"ticket_nums"=>$ticket_nums,"style"=>$style,"car_nums"=>$car_nums,"goadd"=>$goadd);
+        $remark=$this->filter($_POST['remark']);
+        $data=array("remark"=>$remark,"status"=>1,"title"=>$title,"date"=>$date,"nickname"=>$nickname,"tid"=>$tid,"uid"=>$uid,"watch_nums"=>$watch_nums,"ticket_nums"=>$ticket_nums,"style"=>$style,"car_nums"=>$car_nums,"goadd"=>$goadd);
+        
         $log=D("BallLog");
         $result=$log->addData($data);
         if($result){

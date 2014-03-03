@@ -1,6 +1,23 @@
 window.setPage = function(url) {
+    var reg=/Admin\/([a-z]*)/;
+    var arr=url.match(reg);
+    var href="";
+    switch(arr[1]){
+        case "news":
+            href="#/news/list/";
+            break;
+        case "user":
+            href="#/user/user_info/";
+            break;
+        case "party":
+            href="#/party/party_list/";
+            break; 
+        case "ball":
+            href="#/ball/ball_list/";
+            break;                  
+    }
     url = encodeURIComponent(url);
-    window.location.href = "#/news/list/?url=" + url;
+    window.location.href = href+"?url=" + url;
 }
 
 window.changePage = function(uri, val) {
@@ -240,6 +257,7 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
                         $scope.ball.car_cost = data[0].car_cost;
                         $scope.ball.status = data[0].status;
                         $scope.ball.remark = data[0].remark;
+                        $scope.ball.openObject=data[0].openObject;
                         $("#match_time").val(data[0].match_time);
                         $scope.type = "确认修改";
                     }
@@ -326,6 +344,10 @@ app.controller('ballCtrl', ['$scope', '$http', '$location', '$routeParams',
             });
         }
 
+        $scope.downloadlog=function(id){
+            window.location.href="../index.php/Admin/ball/downloadlog?id="+id;
+        }
+
 
     }
 ]);
@@ -374,7 +396,9 @@ app.controller('userCtrl', ['$scope', '$http', '$location', '$routeParams',
 
         $scope.search = function() {
             $val = $("#searchValue").val();
-            var $url = $routeParams.url ? $routeParams.url : "../index.php/Admin/user/ajaxGetUsers?page=1&search=" + $val;
+
+            var $url = "../index.php/Admin/user/ajaxGetUsers?page=1&search=" + $val;
+
             $http.get($url).success(function(data) {
                 $scope.users = data.data;
                 $scope.page = data.page;

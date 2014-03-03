@@ -20,7 +20,7 @@
 					<?php
  if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
-							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
+							<button id="login" class="btn btn-primary btn-sm custom">登录</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
 					<?php } ?>
 					
@@ -74,25 +74,36 @@
 				<img src="__PUBLIC__/img/person.png" width="25" height="30" />
 						&nbsp;<span id="person_title">个人中心</span>
 			</div>
-			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9">
+			<div style="margin-top:10px;border-bottom: 1px solid #ecd9d9;min-height:400px;">
 				<div id="left">
 					<li><a href="__APP__/User/balldeatils" style="color: #c03e3e;;font-weight:bold;font-size:14px;">看球记录</a></li>
 					<li><a href="__APP__/User/partydeatils">聚会记录</a></li>
 					<li><a href="__APP__/User/changePwd">修改密码</a></li>
 				</div>
 				<div id="right">
-					<div style="min-height:190px;">
+					<div style="min-height:370px;">
 						
-						<?php if(is_array($data)): foreach($data as $key=>$vo): ?><div class="left">
-								<?php echo ($vo["title"]); ?>
-							</div>
-							<div class="right">
-								<?php if($vo["status"] == 2): ?>已结束
-							   <?php elseif($vo["status"] == 0): ?>已取消
-							<?php else: ?> 
-								<a href="__APP__/Ball/cancel?id=<?php echo ($vo["id"]); ?>" class="cancel">取消报名</a><?php endif; ?>
-							</div>
-							<div style="clear:left"></div><?php endforeach; endif; ?>
+						<table style="width:700px;">
+							
+							<tbody>
+								<?php if(is_array($data)): foreach($data as $key=>$vo): ?><tr>
+										<td><?php echo ($vo["title"]); ?></td>
+										<td class="logtd"><?php echo ($vo["watch_nums"]); ?>人看球</td>
+										<td class="logtd"><?php echo ($vo["ticket_nums"]); ?>张球票</td>
+										<td class="logtd"><?php echo ($vo["car_nums"]); ?>人跟车</td>
+										<td class="logtd"><?php echo ($vo["goadd"]); ?></td>
+										<td class="logtd">
+											<?php if($vo["isPay"] == 1): ?>已付款
+											<?php else: ?>
+											未付款<?php endif; ?>
+										</td>
+										<td><?php if($vo["status"] == 2): ?>已结束
+										   <?php elseif($vo["status"] == 0): ?>已取消
+										<?php else: ?> 
+											<a href="__APP__/Ball/cancel?id=<?php echo ($vo["id"]); ?>" class="cancel">取消报名</a><?php endif; ?></td>
+									</tr><?php endforeach; endif; ?>
+							</tbody>
+						</table>
 
 					</div>
 					<div>
@@ -169,7 +180,7 @@
 			</div>	
 
 			<div>
-				© 2013-2014&emsp;深九团版权所有
+				© 2013-2014&emsp;深九团版权所有<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000281957'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1000281957%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 			</div>
 		</div>
 	</div>
@@ -196,7 +207,7 @@
 					<br/>
 				</div>
 				<div>
-					<input class="btn btn-default" type="submit" value="登陆" />
+					<input class="btn btn-default" type="submit" value="登录" />
 					&emsp;
 					<input class="btn btn-default" type="reset" value="重置" />
 				</div>
@@ -318,6 +329,7 @@
 		}
 		
 	</script>
+	
 </body>
 </html>
 <script>

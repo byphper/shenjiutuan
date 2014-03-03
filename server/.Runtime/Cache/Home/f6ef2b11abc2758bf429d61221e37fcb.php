@@ -20,7 +20,7 @@
 					<?php
  if(!empty($_SESSION['user'])){ $name=$_SESSION['user']['nickname']; echo "<a class='nickname' href='__APP__/User/balldeatils'>$name</a>&emsp;<a class='nickname' href='__APP__/User/loginout'>退出</a>"; }else{?>
 
-							<button id="login" class="btn btn-primary btn-sm custom">登陆</button>
+							<button id="login" class="btn btn-primary btn-sm custom">登录</button>
 					<button id="regist" class="btn btn-primary btn-sm custom">注册</button>
 					<?php } ?>
 					
@@ -85,19 +85,19 @@
 					  <div class="form-group">
 					    <label for="inputEmail3" class="col-sm-2 control-label">旧密码</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputEmail3" placeholder="旧密码" name="old">
+					      <input type="password" style="width:200px;" class="form-control" id="inputEmail3" placeholder="旧密码" name="old">
 					    </div>
 					  </div>
 					  <div class="form-group">
 					    <label for="inputPassword3" class="col-sm-2 control-label">新密码</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="新密码" name="new1">
+					      <input type="password" style="width:200px;" class="form-control" id="inputPassword3" placeholder="新密码" name="new1">
 					    </div>
 					  </div>
 					   <div class="form-group">
 					    <label for="inputPassword3" class="col-sm-2 control-label">新密码</label>
 					    <div class="col-sm-10">
-					      <input type="password" class="form-control" id="inputPassword3" placeholder="确认密码" name="new2">
+					      <input type="password" style="width:200px;" class="form-control" id="inputPassword3" placeholder="确认密码" name="new2">
 					    </div>
 					  </div>
 					  
@@ -178,7 +178,7 @@
 			</div>	
 
 			<div>
-				© 2013-2014&emsp;深九团版权所有
+				© 2013-2014&emsp;深九团版权所有<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000281957'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s23.cnzz.com/z_stat.php%3Fid%3D1000281957%26show%3Dpic' type='text/javascript'%3E%3C/script%3E"));</script>
 			</div>
 		</div>
 	</div>
@@ -205,7 +205,7 @@
 					<br/>
 				</div>
 				<div>
-					<input class="btn btn-default" type="submit" value="登陆" />
+					<input class="btn btn-default" type="submit" value="登录" />
 					&emsp;
 					<input class="btn btn-default" type="reset" value="重置" />
 				</div>
@@ -327,6 +327,7 @@
 		}
 		
 	</script>
+	
 </body>
 </html>
 <style>

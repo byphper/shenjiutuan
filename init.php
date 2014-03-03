@@ -7,5 +7,5 @@ define('APP_NAME', './shenjiutuan');
 define('APP_PATH', './server/.');   
 
 define ("ADMIN_NAME","sjt");
-define ('BACKPATH',"/shenjiutuan/sjt/");
+define ('BACKPATH',"/sjt/");
 

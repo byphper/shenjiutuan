@@ -16,6 +16,11 @@
   地点:<input type="text" required class="form-control" ng-model="ball.match_address">
   球票价格:<input type="text" required class="form-control" ng-model="ball.ticket_cost">
   跟车费用:<input type="text" required class="form-control" ng-model="ball.car_cost"><br />
+  开放对象：<select class="form-control" style="color:red" ng-init="ball.openObject=0" ng-model='ball.openObject'>
+          <option value='0' checked='checked'>所有网站会员</option>
+          <option value='1'>内部会员</option>
+          
+      </select>
   状态：<select class="form-control" style="color:red" ng-init="ball.status=0" ng-model='ball.status'>
           <option value='0' checked='checked'>未开放</option>
           <option value='1'>开始报名</option>
